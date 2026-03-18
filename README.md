@@ -1,1 +1,0 @@
-# FitAI-Smart-Fitness-Tracker
