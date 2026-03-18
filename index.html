@@ -7,143 +7,73 @@
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#f4f6f9;color:#1a1a2e;min-height:100vh}
-:root{--blue:#2563eb;--green:#16a34a;--orange:#ea580c;--red:#dc2626;--gray:#6b7280;--light:#f8fafc;--white:#ffffff;--border:#e2e8f0;--radius:10px}
-
-/* NAV */
 nav{background:linear-gradient(135deg,#1a1a2e,#16213e);padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:60px;position:sticky;top:0;z-index:100;box-shadow:0 2px 12px rgba(0,0,0,0.3)}
-.logo{color:#fff;font-size:22px;font-weight:700;letter-spacing:1px}
+.logo{color:#fff;font-size:18px;font-weight:700;letter-spacing:1px}
 .logo span{color:#f97316}
 .nav-tabs{display:flex;gap:4px}
-.nav-tab{background:transparent;border:none;color:rgba(255,255,255,0.6);padding:8px 14px;border-radius:8px;cursor:pointer;font-size:13px;font-weight:500;transition:all .2s}
+.nav-tab{background:transparent;border:none;color:rgba(255,255,255,0.6);padding:8px 12px;border-radius:8px;cursor:pointer;font-size:12px;font-weight:500;transition:all .2s}
 .nav-tab:hover{background:rgba(255,255,255,0.1);color:#fff}
 .nav-tab.active{background:rgba(249,115,22,0.2);color:#f97316}
-
-/* LAYOUT */
 .container{max-width:860px;margin:0 auto;padding:24px 16px}
-
-/* CARDS */
 .card{background:#fff;border-radius:14px;padding:20px 24px;margin-bottom:16px;box-shadow:0 1px 4px rgba(0,0,0,0.07)}
 .card h2{font-size:17px;font-weight:600;margin-bottom:16px;color:#1a1a2e}
-
-/* GRID */
 .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
 .grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
-
-/* STAT CARDS */
 .stat{background:#f8fafc;border-radius:10px;padding:14px;border:1px solid #e2e8f0}
 .stat .label{font-size:11px;color:#6b7280;margin-bottom:4px;text-transform:uppercase;letter-spacing:.5px}
 .stat .val{font-size:22px;font-weight:700;color:#1a1a2e}
-.stat .sub{font-size:11px;color:#9ca3af;margin-top:2px}
-
-/* INPUTS */
 label{font-size:12px;color:#6b7280;display:block;margin-bottom:5px;font-weight:500}
 input,select{width:100%;padding:9px 12px;border:1.5px solid #e2e8f0;border-radius:8px;font-size:14px;color:#1a1a2e;background:#fff;outline:none;transition:border .2s}
 input:focus,select:focus{border-color:#2563eb}
-
-/* BUTTONS */
 .btn{padding:10px 22px;border-radius:8px;font-size:14px;font-weight:600;cursor:pointer;border:none;transition:all .2s}
-.btn-primary{background:linear-gradient(135deg,#2563eb,#1d4ed8);color:#fff}
-.btn-primary:hover{opacity:.9}
 .btn-success{background:#dcfce7;color:#16a34a;border:1px solid #bbf7d0}
 .btn-outline{background:#fff;color:#1a1a2e;border:1.5px solid #e2e8f0}
 .btn-outline:hover{border-color:#2563eb;color:#2563eb}
-.btn-orange{background:linear-gradient(135deg,#f97316,#ea580c);color:#fff}
-.btn-orange:hover{opacity:.9}
-.btn:disabled{opacity:.6;cursor:default}
-
-/* BADGE */
 .badge{display:inline-block;padding:3px 10px;border-radius:20px;font-size:11px;font-weight:600}
 .badge-blue{background:#dbeafe;color:#1d4ed8}
 .badge-green{background:#dcfce7;color:#15803d}
-.badge-orange{background:#ffedd5;color:#c2410c}
-
-/* MEAL ROW */
 .meal-row{display:flex;gap:14px;padding:10px 0;border-bottom:1px solid #f1f5f9}
 .meal-row:last-child{border-bottom:none}
 .meal-time{font-size:12px;color:#9ca3af;min-width:90px;padding-top:3px;font-weight:500}
 .meal-food{font-size:14px;font-weight:500;color:#1a1a2e}
 .meal-note{font-size:12px;color:#9ca3af;margin-top:2px}
-
-/* EXERCISE CARD */
 .ex-card{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:16px;transition:box-shadow .2s}
 .ex-card:hover{box-shadow:0 4px 16px rgba(0,0,0,0.1)}
-.ex-icon{font-size:28px;margin-bottom:8px}
-.ex-name{font-size:15px;font-weight:600;color:#1a1a2e;margin-bottom:4px}
-.ex-desc{font-size:12px;color:#6b7280;margin:6px 0 10px}
 .ex-link{font-size:13px;color:#2563eb;text-decoration:none;font-weight:500}
-.ex-link:hover{text-decoration:underline}
-
-/* WORKOUT ROW */
 .wo-row{display:flex;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid #f1f5f9;font-size:14px}
 .wo-row:last-child{border-bottom:none}
 .wo-dot{width:7px;height:7px;border-radius:50%;background:#2563eb;flex-shrink:0}
-
-/* PROGRESS */
-.progress-bar-wrap{background:#f1f5f9;border-radius:20px;height:8px;margin-top:4px;overflow:hidden}
-.progress-bar{height:8px;border-radius:20px;background:linear-gradient(90deg,#2563eb,#7c3aed)}
-
-/* MILESTONE */
-.milestone{display:flex;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid #f1f5f9}
-.milestone:last-child{border-bottom:none}
-.ms-check{width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;flex-shrink:0}
-.ms-done{background:#dcfce7;color:#16a34a}
-.ms-todo{background:#f1f5f9;color:#9ca3af}
-.ms-label{font-size:13px;color:#374151;flex:1}
-
-/* QUOTE */
-.quote-box{background:linear-gradient(135deg,#1e3a5f,#1a1a2e);border-radius:14px;padding:28px;text-align:center;margin-bottom:16px;color:#fff}
-.quote-label{font-size:11px;color:rgba(255,255,255,0.5);letter-spacing:2px;text-transform:uppercase;margin-bottom:12px}
-.quote-text{font-size:18px;font-weight:500;line-height:1.6;color:#f1f5f9}
-
-/* REMINDER */
-.reminder{font-size:13px;color:#6b7280;padding:8px 0 8px 14px;border-left:3px solid #2563eb;margin-bottom:8px}
-
-/* ALERT */
-.alert{padding:12px 16px;border-radius:10px;font-size:13px;margin-bottom:16px;display:none}
-.alert-warning{background:#fff7ed;border:1px solid #fed7aa;color:#c2410c}
-.alert-success{background:#f0fdf4;border:1px solid #bbf7d0;color:#16a34a}
-
-/* HISTORY ROW */
 .hist-row{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid #f1f5f9;font-size:13px}
 .hist-row:last-child{border-bottom:none}
-
-/* AI BOX */
 .ai-box{background:#f8fafc;border-radius:10px;padding:14px;font-size:14px;line-height:1.7;color:#374151;white-space:pre-line;margin-top:12px}
-
-/* CHART CANVAS */
+.milestone{display:flex;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid rgba(255,255,255,0.15)}
+.milestone:last-child{border-bottom:none}
+.alert{padding:12px 16px;border-radius:10px;font-size:13px;margin-bottom:16px;display:none;background:#fff7ed;border:1px solid #fed7aa;color:#c2410c}
 #weightChart{width:100%!important;height:220px!important}
-
-/* TABS (mobile fallback) */
-@media(max-width:600px){
-  .nav-tabs{display:none}
-  .mobile-tabs{display:flex!important}
-}
+.lang-select-wrap{display:flex;align-items:center;gap:8px;background:rgba(255,255,255,0.08);border-radius:8px;padding:4px 10px}
+.lang-select-wrap select{background:transparent;border:none;color:#fff;font-size:12px;cursor:pointer;outline:none;padding:4px 2px}
+.lang-select-wrap select option{background:#1a1a2e;color:#fff}
+@media(max-width:600px){.nav-tabs{display:none}.mobile-tabs{display:flex!important}}
 .mobile-tabs{display:none;overflow-x:auto;gap:6px;padding:12px 16px;background:#fff;border-bottom:1px solid #e2e8f0}
 .mobile-tab{white-space:nowrap;padding:7px 14px;border-radius:20px;font-size:13px;font-weight:500;border:1.5px solid #e2e8f0;background:#fff;cursor:pointer;color:#6b7280}
 .mobile-tab.active{background:#dbeafe;border-color:#2563eb;color:#1d4ed8}
-
-.section{display:none}
-.section.active{display:block}
-
-/* header bar */
-.page-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px}
-.page-header h1{font-size:20px;font-weight:700;color:#1a1a2e}
-.page-header .sub{font-size:13px;color:#9ca3af}
+.section{display:none}.section.active{display:block}
 </style>
 </head>
 <body>
 
 <nav>
-  <div class="logo">Fit<span>AI</span> <span style="font-size:13px;font-weight:400;color:rgba(255,255,255,0.6);letter-spacing:.5px">– Smart Fitness Tracker</span></div>
-  <div style="display:none;align-items:center;gap:8px" id="capBanner"></div>
-  <div class="nav-tabs" id="navTabs">
-    <button class="nav-tab active" onclick="showTab('profile')">Profile</button>
-    <button class="nav-tab" onclick="showTab('nutrition')">Nutrition</button>
-    <button class="nav-tab" onclick="showTab('workout')">Workout</button>
-    <button class="nav-tab" onclick="showTab('exercises')">Exercises</button>
-    <button class="nav-tab" onclick="showTab('progress')">Progress</button>
-    <button class="nav-tab" onclick="showTab('motivation')">Motivation</button>
+  <div class="logo">Fit<span>AI</span> <span style="font-size:11px;font-weight:400;color:rgba(255,255,255,0.5)">– Smart Fitness Tracker</span></div>
+  <div style="display:flex;align-items:center;gap:8px">
+    <div class="nav-tabs" id="navTabs">
+      <button class="nav-tab active" onclick="showTab('profile')" id="ntab-profile">Profile</button>
+      <button class="nav-tab" onclick="showTab('nutrition')" id="ntab-nutrition">Nutrition</button>
+      <button class="nav-tab" onclick="showTab('workout')" id="ntab-workout">Workout</button>
+      <button class="nav-tab" onclick="showTab('exercises')" id="ntab-exercises">Exercises</button>
+      <button class="nav-tab" onclick="showTab('progress')" id="ntab-progress">Progress</button>
+      <button class="nav-tab" onclick="showTab('motivation')" id="ntab-motivation">Motivation</button>
+    </div>
   </div>
 </nav>
 
@@ -156,74 +86,147 @@ input:focus,select:focus{border-color:#2563eb}
   <button class="mobile-tab" onclick="showTab('motivation')">Motivation</button>
 </div>
 
-
 <div class="container">
-
-  <!-- MISSED ALERT -->
-  <div class="alert alert-warning" id="missedAlert">
-    Hey! You missed your last workout. Today is a great day to get back on track — you've got this!
-  </div>
+  <div class="alert" id="missedAlert"></div>
 
   <!-- ===== PROFILE ===== -->
   <div class="section active" id="sec-profile">
-    <div class="page-header">
-      <div><h1>Your Profile</h1><div class="sub" id="todayDate"></div></div>
-      <div id="profileBadge" style="display:none"><span class="badge badge-blue" id="goalBadge"></span></div>
+    <!-- Hero -->
+    <div style="background:linear-gradient(135deg,#0f0c29,#302b63,#24243e);border-radius:18px;padding:36px 28px;text-align:center;margin-bottom:20px;position:relative;overflow:hidden">
+      <div style="position:absolute;top:-40px;right:-40px;width:140px;height:140px;border-radius:50%;background:rgba(249,115,22,0.12)"></div>
+      <div style="position:absolute;bottom:-30px;left:-30px;width:100px;height:100px;border-radius:50%;background:rgba(99,102,241,0.15)"></div>
+      <div style="font-size:42px;margin-bottom:10px">💪</div>
+      <div style="font-size:22px;font-weight:700;color:#fff;margin-bottom:6px" id="heroName">Welcome, Champion!</div>
+      <div style="font-size:13px;color:rgba(255,255,255,0.55);margin-bottom:14px" id="todayDate"></div>
+      <div style="display:inline-block;background:rgba(249,115,22,0.2);border:1px solid rgba(249,115,22,0.4);color:#fb923c;padding:6px 18px;border-radius:20px;font-size:12px;font-weight:600" id="goalBadge">Set your goal below</div>
     </div>
-    <div class="card">
-      <h2>Personal details</h2>
+
+    <!-- Language Selector -->
+    <div class="card" style="border-left:4px solid #f97316;padding:16px 20px">
+      <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap">
+        <span style="font-size:22px">🌐</span>
+        <div style="flex:1">
+          <div style="font-size:14px;font-weight:600;color:#1a1a2e" id="langLabel">Choose your language</div>
+          <div style="font-size:12px;color:#6b7280" id="langSub">All content will switch to your selected language</div>
+        </div>
+        <select id="langSelector" onchange="applyLanguage(this.value)" style="width:200px;border:1.5px solid #f97316;border-radius:8px;font-size:14px;padding:9px 12px;color:#1a1a2e;font-weight:500">
+          <option value="en">🇮🇳 English</option>
+          <option value="hi">हिंदी – Hindi</option>
+          <option value="ta">தமிழ் – Tamil</option>
+          <option value="te">తెలుగు – Telugu</option>
+          <option value="kn">ಕನ್ನಡ – Kannada</option>
+          <option value="ml">മലയാളം – Malayalam</option>
+          <option value="mr">मराठी – Marathi</option>
+          <option value="bn">বাংলা – Bengali</option>
+          <option value="gu">ગુજરાતી – Gujarati</option>
+          <option value="pa">ਪੰਜਾਬੀ – Punjabi</option>
+          <option value="or">ଓଡ଼ିଆ – Odia</option>
+          <option value="as">অসমীয়া – Assamese</option>
+          <option value="ur">اردو – Urdu</option>
+          <option value="ks">कॉशुर – Kashmiri</option>
+          <option value="sd">سنڌي – Sindhi</option>
+          <option value="sa">संस्कृतम् – Sanskrit</option>
+          <option value="ne">नेपाली – Nepali</option>
+          <option value="si">සිංහල – Sinhala</option>
+          <option value="mni">মৈতৈলোন্ – Manipuri</option>
+          <option value="kok">कोंकणी – Konkani</option>
+          <option value="mai">मैथिली – Maithili</option>
+          <option value="doi">डोगरी – Dogri</option>
+          <option value="sat">ᱥᱟᱱᱛᱟᱲᱤ – Santali</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Inspirational strip -->
+    <div style="background:linear-gradient(90deg,#f97316,#ea580c);border-radius:12px;padding:14px 20px;margin-bottom:20px;display:flex;align-items:center;gap:12px">
+      <span style="font-size:22px">🚀</span>
+      <div>
+        <div style="color:#fff;font-size:13px;font-weight:600" id="inspireTitle">Your journey starts with a single step.</div>
+        <div style="color:rgba(255,255,255,0.8);font-size:12px" id="inspireSub">Fill in your details below and let FitAI build your personalized plan.</div>
+      </div>
+    </div>
+
+    <!-- Form -->
+    <div class="card" style="border-top:4px solid #f97316">
+      <h2 id="formTitle">🧬 Personal details</h2>
       <div class="grid-2" style="gap:14px">
-        <div><label>Full name</label><input type="text" id="pName" placeholder="e.g. Alex Kumar"/></div>
-        <div><label>Age (years)</label><input type="number" id="pAge" placeholder="25" value="25"/></div>
-        <div><label>Weight (kg)</label><input type="number" id="pWeight" placeholder="70" value="70"/></div>
-        <div><label>Height (cm)</label><input type="number" id="pHeight" placeholder="175" value="175"/></div>
-        <div><label>Sex</label>
-          <select id="pSex"><option value="male">Male</option><option value="female">Female</option></select>
+        <div><label id="lName">Full name</label><input type="text" id="pName" placeholder="e.g. Mohan Kumar"/></div>
+        <div><label id="lAge">Age (years)</label><input type="number" id="pAge" value="25"/></div>
+        <div><label id="lWeight">Weight (kg)</label><input type="number" id="pWeight" value="70"/></div>
+        <div><label id="lHeight">Height (cm)</label><input type="number" id="pHeight" value="175"/></div>
+        <div><label id="lSex">Sex</label>
+          <select id="pSex"><option value="male" id="oMale">Male</option><option value="female" id="oFemale">Female</option></select>
         </div>
-        <div><label>Body frame</label>
-          <select id="pFrame"><option value="small">Small</option><option value="medium" selected>Medium</option><option value="large">Large</option></select>
+        <div><label id="lFrame">Body frame</label>
+          <select id="pFrame"><option value="small" id="oSmall">Small</option><option value="medium" selected id="oMedium">Medium</option><option value="large" id="oLarge">Large</option></select>
         </div>
-        <div><label>Activity level</label>
+        <div><label id="lActivity">Activity level</label>
           <select id="pActivity">
-            <option value="1.2">Sedentary (desk job)</option>
-            <option value="1.375">Light (1–3x/week)</option>
-            <option value="1.55" selected>Moderate (3–5x/week)</option>
-            <option value="1.725">Active (6–7x/week)</option>
-            <option value="1.9">Very active (2x/day)</option>
+            <option value="1.2" id="oSed">Sedentary (desk job)</option>
+            <option value="1.375" id="oLight">Light (1–3x/week)</option>
+            <option value="1.55" selected id="oMod">Moderate (3–5x/week)</option>
+            <option value="1.725" id="oActive">Active (6–7x/week)</option>
+            <option value="1.9" id="oVery">Very active (2x/day)</option>
           </select>
         </div>
-        <div><label>Fitness goal</label>
+        <div><label id="lGoal">Fitness goal</label>
           <select id="pGoal">
-            <option value="gain">Muscle gain / Bulk</option>
-            <option value="lean">Lean / Cut</option>
-            <option value="maintain">Maintain</option>
+            <option value="gain" id="oGain">Muscle gain / Bulk</option>
+            <option value="lean" id="oLean">Lean / Cut</option>
+            <option value="maintain" id="oMaintain">Maintain</option>
           </select>
         </div>
       </div>
-      <button class="btn btn-primary" style="margin-top:18px" onclick="saveProfile()">Save profile</button>
+      <button style="margin-top:18px;width:100%;padding:13px;font-size:15px;background:linear-gradient(135deg,#f97316,#ea580c);border:none;border-radius:10px;color:#fff;font-weight:700;cursor:pointer" onclick="saveProfile()" id="saveBtn">🔥 Build My Fitness Plan</button>
     </div>
+
+    <!-- Stats -->
     <div id="statsRow" style="display:none">
-      <div class="grid-4">
-        <div class="stat"><div class="label">BMR</div><div class="val" id="sBMR">—</div><div class="sub">Base metabolic rate</div></div>
-        <div class="stat"><div class="label">TDEE</div><div class="val" id="sTDEE">—</div><div class="sub">Total daily energy</div></div>
-        <div class="stat"><div class="label">Daily target</div><div class="val" id="sTarget">—</div><div class="sub">Calorie goal</div></div>
-        <div class="stat"><div class="label">Goal</div><div class="val" id="sGoal">—</div><div class="sub">Your focus</div></div>
+      <div style="background:linear-gradient(135deg,#0f172a,#1e293b);border-radius:16px;padding:20px;margin-bottom:16px">
+        <div style="color:rgba(255,255,255,0.5);font-size:11px;text-transform:uppercase;letter-spacing:1px;margin-bottom:14px" id="statsTitle">Your daily targets</div>
+        <div class="grid-4" style="gap:10px">
+          <div style="background:rgba(255,255,255,0.07);border-radius:10px;padding:14px;text-align:center">
+            <div style="font-size:10px;color:rgba(255,255,255,0.45);margin-bottom:4px" id="sBMRLabel">BMR</div>
+            <div style="font-size:18px;font-weight:700;color:#f97316" id="sBMR">—</div>
+            <div style="font-size:10px;color:rgba(255,255,255,0.35)" id="sBMRSub">Base rate</div>
+          </div>
+          <div style="background:rgba(255,255,255,0.07);border-radius:10px;padding:14px;text-align:center">
+            <div style="font-size:10px;color:rgba(255,255,255,0.45);margin-bottom:4px" id="sTDEELabel">TDEE</div>
+            <div style="font-size:18px;font-weight:700;color:#818cf8" id="sTDEE">—</div>
+            <div style="font-size:10px;color:rgba(255,255,255,0.35)" id="sTDEESub">Daily energy</div>
+          </div>
+          <div style="background:rgba(255,255,255,0.07);border-radius:10px;padding:14px;text-align:center">
+            <div style="font-size:10px;color:rgba(255,255,255,0.45);margin-bottom:4px" id="sTargetLabel">Target</div>
+            <div style="font-size:18px;font-weight:700;color:#34d399" id="sTarget">—</div>
+            <div style="font-size:10px;color:rgba(255,255,255,0.35)" id="sTargetSub">Calorie goal</div>
+          </div>
+          <div style="background:rgba(255,255,255,0.07);border-radius:10px;padding:14px;text-align:center">
+            <div style="font-size:10px;color:rgba(255,255,255,0.45);margin-bottom:4px" id="sGoalLabel">Goal</div>
+            <div style="font-size:18px;font-weight:700;color:#fb923c" id="sGoal">—</div>
+            <div style="font-size:10px;color:rgba(255,255,255,0.35)" id="sGoalSub">Your focus</div>
+          </div>
+        </div>
+      </div>
+      <div style="background:linear-gradient(135deg,#14532d,#15803d);border-radius:14px;padding:20px;text-align:center">
+        <div style="font-size:28px;margin-bottom:8px">🎯</div>
+        <div style="font-size:15px;font-weight:600;color:#fff;margin-bottom:4px" id="savedMsg">Profile saved! Your plan is ready.</div>
+        <div style="font-size:12px;color:rgba(255,255,255,0.7)" id="savedSub">Head to Nutrition, Workout and Exercises tabs to get started.</div>
       </div>
     </div>
   </div>
 
   <!-- ===== NUTRITION ===== -->
   <div class="section" id="sec-nutrition">
-    <div class="page-header"><h1>Nutrition Plan</h1></div>
-    <div id="noProfile1" class="card"><p style="color:#9ca3af;font-size:14px">Please save your profile first.</p></div>
+    <div style="margin-bottom:16px"><h1 style="font-size:20px;font-weight:700" id="nutTitle">Nutrition Plan</h1></div>
+    <div id="noProfile1" class="card"><p style="color:#9ca3af;font-size:14px" id="noProfileMsg">Please save your profile first.</p></div>
     <div id="nutritionContent" style="display:none">
       <div class="grid-3" style="margin-bottom:16px">
-        <div class="stat" style="background:#dbeafe;border-color:#bfdbfe"><div class="label" style="color:#1d4ed8">Protein / day</div><div class="val" style="color:#1d4ed8" id="nProtein">—</div></div>
-        <div class="stat" style="background:#fff7ed;border-color:#fed7aa"><div class="label" style="color:#c2410c">Carbs / day</div><div class="val" style="color:#c2410c" id="nCarbs">—</div></div>
-        <div class="stat" style="background:#f0fdf4;border-color:#bbf7d0"><div class="label" style="color:#15803d">Fats / day</div><div class="val" style="color:#15803d" id="nFat">—</div></div>
+        <div class="stat" style="background:#dbeafe;border-color:#bfdbfe"><div class="label" style="color:#1d4ed8" id="nProteinLabel">Protein / day</div><div class="val" style="color:#1d4ed8" id="nProtein">—</div></div>
+        <div class="stat" style="background:#fff7ed;border-color:#fed7aa"><div class="label" style="color:#c2410c" id="nCarbsLabel">Carbs / day</div><div class="val" style="color:#c2410c" id="nCarbs">—</div></div>
+        <div class="stat" style="background:#f0fdf4;border-color:#bbf7d0"><div class="label" style="color:#15803d" id="nFatLabel">Fats / day</div><div class="val" style="color:#15803d" id="nFat">—</div></div>
       </div>
       <div class="card">
-        <h2 id="mealPlanTitle">Meal plan <span class="badge badge-blue" id="calBadge"></span></h2>
+        <h2 id="mealPlanTitle">Meal Plan</h2>
         <div id="mealList"></div>
       </div>
     </div>
@@ -231,341 +234,471 @@ input:focus,select:focus{border-color:#2563eb}
 
   <!-- ===== WORKOUT ===== -->
   <div class="section" id="sec-workout">
-    <div class="page-header"><h1>Workout</h1></div>
+    <div style="margin-bottom:16px"><h1 style="font-size:20px;font-weight:700" id="woPageTitle">Workout</h1></div>
     <div class="card">
       <h2 id="woTitle">Today's workout</h2>
       <p id="woFocus" style="font-size:13px;color:#6b7280;margin-bottom:14px"></p>
       <div id="woList"></div>
-      <button class="btn btn-primary" style="margin-top:16px" id="woBtn" onclick="logWorkout()">Mark workout as done</button>
+      <button style="margin-top:16px;padding:10px 22px;border-radius:8px;font-size:14px;font-weight:600;cursor:pointer;border:none;background:linear-gradient(135deg,#2563eb,#1d4ed8);color:#fff" id="woBtn" onclick="logWorkout()">Mark workout as done</button>
     </div>
     <div class="card">
-      <h2>Workout history</h2>
-      <div id="woHistory"><p style="color:#9ca3af;font-size:14px">No workouts logged yet.</p></div>
+      <h2 id="woHistTitle">Workout history</h2>
+      <div id="woHistory"><p style="color:#9ca3af;font-size:14px" id="noWoMsg">No workouts logged yet.</p></div>
       <p id="woStreak" style="font-size:13px;color:#6b7280;margin-top:10px"></p>
     </div>
   </div>
 
   <!-- ===== EXERCISES ===== -->
   <div class="section" id="sec-exercises">
-    <div class="page-header"><h1>Exercise Guide</h1></div>
-    <p style="font-size:13px;color:#6b7280;margin-bottom:16px">Tap a demo link to watch correct form on YouTube.</p>
+    <div style="margin-bottom:8px"><h1 style="font-size:20px;font-weight:700" id="exPageTitle">Exercise Guide</h1></div>
+    <p style="font-size:13px;color:#6b7280;margin-bottom:16px" id="exSubtitle">Tap a demo link to watch correct form on YouTube.</p>
     <div class="grid-2" id="exGrid"></div>
   </div>
 
   <!-- ===== PROGRESS ===== -->
   <div class="section" id="sec-progress">
-    <div class="page-header"><h1>Progress Tracker</h1></div>
+    <div style="margin-bottom:16px"><h1 style="font-size:20px;font-weight:700" id="progPageTitle">Progress Tracker</h1></div>
     <div class="card" style="display:flex;gap:10px;align-items:flex-end">
-      <div style="flex:1"><label>Log today's weight (kg)</label><input type="number" id="weightInput" placeholder="e.g. 72.5" step="0.1"/></div>
-      <button class="btn btn-outline" onclick="logWeight()">Log</button>
+      <div style="flex:1"><label id="weightLabel">Log today's weight (kg)</label><input type="number" id="weightInput" placeholder="e.g. 72.5" step="0.1"/></div>
+      <button class="btn btn-outline" onclick="logWeight()" id="logBtn">Log</button>
     </div>
     <div class="card" id="chartCard" style="display:none">
-      <h2>Weight over time</h2>
+      <h2 id="chartTitle">Weight over time</h2>
       <canvas id="weightChart"></canvas>
     </div>
-    <div class="card" id="noChartMsg"><p style="color:#9ca3af;font-size:14px;text-align:center;padding:16px 0">Log at least 2 weight entries to see your progress chart.</p></div>
-    <div class="card" id="aiCard">
-      <h2>AI coach tip</h2>
-      <button class="btn btn-orange" onclick="getAiTip()" id="aiBtn">Get AI coach tip</button>
+    <div class="card" id="noChartMsg2"><p style="color:#9ca3af;font-size:14px;text-align:center;padding:16px 0" id="noChartTxt">Log at least 2 weight entries to see your progress chart.</p></div>
+    <div class="card">
+      <h2 id="aiTitle">AI coach tip</h2>
+      <button style="padding:8px 16px;font-size:13px;background:linear-gradient(135deg,#f97316,#ea580c);color:#fff;border:none;border-radius:8px;cursor:pointer;font-weight:600" onclick="getAiTip()" id="aiBtn">Get AI coach tip</button>
       <div id="aiResult" style="display:none" class="ai-box"></div>
     </div>
   </div>
 
   <!-- ===== MOTIVATION ===== -->
   <div class="section" id="sec-motivation">
-    <div class="page-header"><h1>Motivation</h1></div>
-    <div class="quote-box">
-      <div class="quote-label">Quote of the day</div>
-      <div class="quote-text" id="quoteText"></div>
+    <div style="background:linear-gradient(135deg,#0f0c29,#302b63,#24243e);border-radius:18px;padding:40px 28px;text-align:center;margin-bottom:20px;position:relative;overflow:hidden">
+      <div style="position:absolute;top:-30px;left:-30px;width:120px;height:120px;border-radius:50%;background:rgba(249,115,22,0.15)"></div>
+      <div style="position:absolute;bottom:-20px;right:-20px;width:90px;height:90px;border-radius:50%;background:rgba(99,102,241,0.2)"></div>
+      <div style="font-size:11px;color:rgba(255,255,255,0.45);letter-spacing:3px;text-transform:uppercase;margin-bottom:14px" id="quoteLabelTxt">Quote of the day</div>
+      <div id="quoteText" style="font-size:20px;font-weight:600;color:#fff;line-height:1.6;margin-bottom:18px;font-style:italic"></div>
+      <button onclick="newQuote()" style="background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);color:#fff;padding:8px 20px;border-radius:20px;font-size:13px;cursor:pointer" id="newQuoteBtn">New quote</button>
     </div>
-    <div class="card" id="milestonesCard">
-      <h2>Your milestones</h2>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:20px">
+      <div style="background:linear-gradient(135deg,#f97316,#ea580c);border-radius:14px;padding:20px;color:#fff;text-align:center">
+        <div style="font-size:32px;margin-bottom:6px">🔥</div>
+        <div style="font-size:24px;font-weight:700" id="motWorkouts">0</div>
+        <div style="font-size:12px;opacity:.85;margin-top:2px" id="motWorkoutsLabel">Workouts completed</div>
+      </div>
+      <div style="background:linear-gradient(135deg,#6366f1,#4f46e5);border-radius:14px;padding:20px;color:#fff;text-align:center">
+        <div style="font-size:32px;margin-bottom:6px">⚡</div>
+        <div style="font-size:24px;font-weight:700" id="motStreak">0</div>
+        <div style="font-size:12px;opacity:.85;margin-top:2px" id="motStreakLabel">Day streak</div>
+      </div>
+    </div>
+    <div class="card" style="background:linear-gradient(135deg,#f0fdf4,#dcfce7);border:1px solid #bbf7d0;margin-bottom:16px">
+      <h2 style="color:#15803d" id="milestoneTitle">Your milestones</h2>
       <div id="milestonesList"></div>
     </div>
-    <div class="card">
-      <h2>Daily reminders</h2>
-      <div class="reminder">Drink at least 3L of water every day</div>
-      <div class="reminder">Get 7–9 hours of sleep for muscle recovery</div>
-      <div class="reminder">Track your meals consistently</div>
-      <div class="reminder">Always warm up before every session</div>
-      <div class="reminder">Rest days are part of the plan — embrace them</div>
+    <div style="background:linear-gradient(135deg,#1e1b4b,#312e81);border-radius:14px;padding:22px;margin-bottom:16px">
+      <h2 style="color:#fff;font-size:16px;margin-bottom:16px" id="remindersTitle">Daily power reminders</h2>
+      <div style="display:flex;flex-direction:column;gap:10px" id="remindersList"></div>
+    </div>
+    <div style="background:linear-gradient(135deg,#7c3aed,#6d28d9);border-radius:14px;padding:24px;text-align:center">
+      <div style="font-size:28px;margin-bottom:10px">🏆</div>
+      <div style="font-size:16px;font-weight:600;color:#fff;margin-bottom:6px" id="closingTitle">You are stronger than you think</div>
+      <div style="font-size:13px;color:rgba(255,255,255,0.7);line-height:1.6" id="closingSub">Every rep, every meal, every good night's sleep is a vote for the person you are becoming.</div>
     </div>
   </div>
 
-</div><!-- /container -->
+</div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
 <script>
-// ── STATE ──────────────────────────────────────────────
-const state = {
-  profile: null,
-  workouts: [],
-  weights: [],
-  todayDone: false,
+// ── TRANSLATIONS ──────────────────────────────────────
+const T = {
+  en:{
+    welcome:"Welcome, Champion!",langLabel:"Choose your language",langSub:"All content will switch to your selected language",
+    inspireTitle:"Your journey starts with a single step.",inspireSub:"Fill in your details below and let FitAI build your personalized plan.",
+    formTitle:"🧬 Personal details",lName:"Full name",lAge:"Age (years)",lWeight:"Weight (kg)",lHeight:"Height (cm)",
+    lSex:"Sex",oMale:"Male",oFemale:"Female",lFrame:"Body frame",oSmall:"Small",oMedium:"Medium",oLarge:"Large",
+    lActivity:"Activity level",oSed:"Sedentary (desk job)",oLight:"Light (1–3x/week)",oMod:"Moderate (3–5x/week)",oActive:"Active (6–7x/week)",oVery:"Very active (2x/day)",
+    lGoal:"Fitness goal",oGain:"Muscle gain / Bulk",oLean:"Lean / Cut",oMaintain:"Maintain",
+    saveBtn:"🔥 Build My Fitness Plan",statsTitle:"Your daily targets",
+    sBMRLabel:"BMR",sBMRSub:"Base rate",sTDEELabel:"TDEE",sTDEESub:"Daily energy",sTargetLabel:"Target",sTargetSub:"Calorie goal",sGoalLabel:"Goal",sGoalSub:"Your focus",
+    savedMsg:"Profile saved! Your plan is ready.",savedSub:"Head to Nutrition, Workout and Exercises tabs to get started.",
+    nutTitle:"Nutrition Plan",noProfileMsg:"Please save your profile first.",
+    nProteinLabel:"Protein / day",nCarbsLabel:"Carbs / day",nFatLabel:"Fats / day",
+    woPageTitle:"Workout",woTitle:"Today's workout",woHistTitle:"Workout history",noWoMsg:"No workouts logged yet.",woBtn:"Mark workout as done",woDoneBtn:"Workout logged!",
+    exPageTitle:"Exercise Guide",exSubtitle:"Tap a demo link to watch correct form on YouTube.",
+    progPageTitle:"Progress Tracker",weightLabel:"Log today's weight (kg)",logBtn:"Log",chartTitle:"Weight over time",noChartTxt:"Log at least 2 weight entries to see your progress chart.",
+    aiTitle:"AI coach tip",aiBtn:"Get AI coach tip",aiLoading:"Analyzing...",
+    quoteLabelTxt:"Quote of the day",newQuoteBtn:"New quote",
+    milestoneTitle:"Your milestones",remindersTitle:"Daily power reminders",
+    motWorkoutsLabel:"Workouts completed",motStreakLabel:"Day streak",
+    closingTitle:"You are stronger than you think",closingSub:"Every rep, every meal, every good night's sleep is a vote for the person you are becoming.",
+    missedAlert:"Hey {name}! You missed your last workout. Today is a great day to get back on track — you've got this!",
+    goalBulk:"Muscle Gain",goalLean:"Lean / Cut",goalMaintain:"Maintain",
+    msFocus:["Sedentary","Light","Moderate","Active","Very Active"],
+    reminders:["💧 Drink at least 3L of water every day","😴 Get 7–9 hours of sleep for muscle recovery","📊 Track your meals consistently every day","🏃 Always warm up before every session","🧘 Rest days are part of the plan — embrace them"],
+    milestones:["Profile created","First workout logged","5 workouts completed","10 workouts completed","First weight logged","7-day workout streak"],
+    achieved:"Achieved",
+    wofocus:{gain:"Focus: Compound lifts + progressive overload for muscle mass",lean:"Focus: Cardio + compound movements for fat burn",maintain:"Focus: Balanced strength and conditioning"},
+    totalWorkouts:"Total: {n} workout{s} completed",
+    goalBadgeDefault:"Set your goal below",
+  },
+  hi:{
+    welcome:"स्वागत है, चैंपियन!",langLabel:"अपनी भाषा चुनें",langSub:"सभी सामग्री आपकी चुनी हुई भाषा में दिखेगी",
+    inspireTitle:"आपकी यात्रा एक कदम से शुरू होती है।",inspireSub:"नीचे अपनी जानकारी भरें और FitAI आपका व्यक्तिगत प्लान बनाएगा।",
+    formTitle:"🧬 व्यक्तिगत जानकारी",lName:"पूरा नाम",lAge:"आयु (वर्ष)",lWeight:"वजन (किग्रा)",lHeight:"ऊंचाई (सेमी)",
+    lSex:"लिंग",oMale:"पुरुष",oFemale:"महिला",lFrame:"शरीर की बनावट",oSmall:"छोटा",oMedium:"मध्यम",oLarge:"बड़ा",
+    lActivity:"गतिविधि स्तर",oSed:"निष्क्रिय (डेस्क जॉब)",oLight:"हल्का (सप्ताह में 1–3 बार)",oMod:"मध्यम (सप्ताह में 3–5 बार)",oActive:"सक्रिय (सप्ताह में 6–7 बार)",oVery:"बहुत सक्रिय (दिन में 2 बार)",
+    lGoal:"फिटनेस लक्ष्य",oGain:"मांसपेशी बनाएं / बल्क",oLean:"पतला / कट",oMaintain:"बनाए रखें",
+    saveBtn:"🔥 मेरा फिटनेस प्लान बनाएं",statsTitle:"आपके दैनिक लक्ष्य",
+    sBMRLabel:"BMR",sBMRSub:"मूल दर",sTDEELabel:"TDEE",sTDEESub:"दैनिक ऊर्जा",sTargetLabel:"लक्ष्य",sTargetSub:"कैलोरी लक्ष्य",sGoalLabel:"लक्ष्य",sGoalSub:"आपका फोकस",
+    savedMsg:"प्रोफ़ाइल सहेजी गई! आपका प्लान तैयार है।",savedSub:"शुरू करने के लिए पोषण, वर्कआउट और व्यायाम टैब पर जाएं।",
+    nutTitle:"पोषण योजना",noProfileMsg:"कृपया पहले अपनी प्रोफ़ाइल सहेजें।",
+    nProteinLabel:"प्रोटीन / दिन",nCarbsLabel:"कार्ब्स / दिन",nFatLabel:"वसा / दिन",
+    woPageTitle:"वर्कआउट",woTitle:"आज का वर्कआउट",woHistTitle:"वर्कआउट इतिहास",noWoMsg:"अभी तक कोई वर्कआउट दर्ज नहीं।",woBtn:"वर्कआउट पूरा हुआ",woDoneBtn:"वर्कआउट दर्ज हुआ!",
+    exPageTitle:"व्यायाम गाइड",exSubtitle:"सही फॉर्म देखने के लिए डेमो लिंक पर टैप करें।",
+    progPageTitle:"प्रगति ट्रैकर",weightLabel:"आज का वजन दर्ज करें (किग्रा)",logBtn:"दर्ज करें",chartTitle:"समय के साथ वजन",noChartTxt:"चार्ट देखने के लिए कम से कम 2 प्रविष्टियां दर्ज करें।",
+    aiTitle:"AI कोच सुझाव",aiBtn:"AI कोच सुझाव पाएं",aiLoading:"विश्लेषण हो रहा है...",
+    quoteLabelTxt:"आज का उद्धरण",newQuoteBtn:"नया उद्धरण",
+    milestoneTitle:"आपकी उपलब्धियां",remindersTitle:"दैनिक शक्ति अनुस्मारक",
+    motWorkoutsLabel:"वर्कआउट पूर्ण",motStreakLabel:"दिन की श्रृंखला",
+    closingTitle:"आप उससे ज्यादा मजबूत हैं जितना आप सोचते हैं",closingSub:"हर रेप, हर भोजन, हर अच्छी नींद आपके बेहतर भविष्य की नींव है।",
+    missedAlert:"हे {name}! आपने पिछला वर्कआउट मिस किया। आज वापस शुरू करने का सही दिन है!",
+    goalBulk:"मांसपेशी बनाएं",goalLean:"पतला / कट",goalMaintain:"बनाए रखें",
+    reminders:["💧 हर दिन कम से कम 3 लीटर पानी पिएं","😴 मांसपेशियों की रिकवरी के लिए 7-9 घंटे सोएं","📊 रोज अपने भोजन को ट्रैक करें","🏃 हर सत्र से पहले वार्म-अप करें","🧘 आराम के दिन भी योजना का हिस्सा हैं"],
+    milestones:["प्रोफ़ाइल बनाई","पहला वर्कआउट दर्ज हुआ","5 वर्कआउट पूरे हुए","10 वर्कआउट पूरे हुए","पहला वजन दर्ज हुआ","7 दिन की श्रृंखला"],
+    achieved:"प्राप्त",
+    wofocus:{gain:"फोकस: मांसपेशियों के लिए कंपाउंड लिफ्ट",lean:"फोकस: फैट बर्न के लिए कार्डियो",maintain:"फोकस: संतुलित शक्ति और कंडीशनिंग"},
+    totalWorkouts:"कुल: {n} वर्कआउट पूरे हुए",
+    goalBadgeDefault:"नीचे अपना लक्ष्य चुनें",
+  },
+  ta:{
+    welcome:"வரவேற்கிறோம், சாம்பியன்!",langLabel:"உங்கள் மொழியைத் தேர்ந்தெடுக்கவும்",langSub:"அனைத்து உள்ளடக்கமும் தேர்ந்தெடுத்த மொழியில் காட்டப்படும்",
+    inspireTitle:"உங்கள் பயணம் ஒரு படியிலிருந்து தொடங்குகிறது.",inspireSub:"கீழே உங்கள் விவரங்களை நிரப்பவும்.",
+    formTitle:"🧬 தனிப்பட்ட விவரங்கள்",lName:"முழு பெயர்",lAge:"வயது (ஆண்டுகள்)",lWeight:"எடை (கிகி)",lHeight:"உயரம் (செமீ)",
+    lSex:"பாலினம்",oMale:"ஆண்",oFemale:"பெண்",lFrame:"உடல் அமைப்பு",oSmall:"சிறியது",oMedium:"நடுத்தரம்",oLarge:"பெரியது",
+    lActivity:"செயல்பாட்டு நிலை",oSed:"உட்கார்ந்த வேலை",oLight:"இலகு (1–3/வாரம்)",oMod:"மிதமான (3–5/வாரம்)",oActive:"தீவிரமான (6–7/வாரம்)",oVery:"மிகவும் தீவிரமான",
+    lGoal:"உடற்தகுதி இலக்கு",oGain:"தசை வளர்ப்பு",oLean:"மெலிதாக்குதல்",oMaintain:"பராமரிக்க",
+    saveBtn:"🔥 எனது திட்டத்தை உருவாக்கு",statsTitle:"உங்கள் தினசரி இலக்குகள்",
+    sBMRLabel:"BMR",sBMRSub:"அடிப்படை விகிதம்",sTDEELabel:"TDEE",sTDEESub:"தினசரி ஆற்றல்",sTargetLabel:"இலக்கு",sTargetSub:"கலோரி இலக்கு",sGoalLabel:"இலக்கு",sGoalSub:"உங்கள் கவனம்",
+    savedMsg:"சேமிக்கப்பட்டது! உங்கள் திட்டம் தயார்.",savedSub:"தொடங்க போஷாக்கு மற்றும் உடற்பயிற்சி தாவல்களுக்கு செல்லுங்கள்.",
+    nutTitle:"ஊட்டச்சத்து திட்டம்",noProfileMsg:"முதலில் உங்கள் சுயவிவரத்தை சேமிக்கவும்.",
+    nProteinLabel:"புரதம் / நாள்",nCarbsLabel:"கார்ப்ஸ் / நாள்",nFatLabel:"கொழுப்பு / நாள்",
+    woPageTitle:"உடற்பயிற்சி",woTitle:"இன்றைய உடற்பயிற்சி",woHistTitle:"உடற்பயிற்சி வரலாறு",noWoMsg:"இன்னும் பதிவு இல்லை.",woBtn:"உடற்பயிற்சி முடிந்தது",woDoneBtn:"பதிவு செய்யப்பட்டது!",
+    exPageTitle:"உடற்பயிற்சி வழிகாட்டி",exSubtitle:"சரியான முறையை YouTube-ல் காண டேமோ லிங்கை தட்டவும்.",
+    progPageTitle:"முன்னேற்ற கண்காணிப்பு",weightLabel:"இன்றைய எடையை பதிவு செய்க (கிகி)",logBtn:"பதிவு",chartTitle:"காலப்போக்கில் எடை",noChartTxt:"வரைபடம் காண குறைந்தது 2 பதிவுகள் தேவை.",
+    aiTitle:"AI பயிற்சியாளர் ஆலோசனை",aiBtn:"AI ஆலோசனை பெறு",aiLoading:"பகுப்பாய்வு...",
+    quoteLabelTxt:"இன்றைய மேற்கோள்",newQuoteBtn:"புதிய மேற்கோள்",
+    milestoneTitle:"உங்கள் சாதனைகள்",remindersTitle:"தினசரி நினைவூட்டல்கள்",
+    motWorkoutsLabel:"உடற்பயிற்சிகள் முடிந்தன",motStreakLabel:"நாள் தொடர்",
+    closingTitle:"நீங்கள் நினைப்பதை விட வலிமையானவர்",closingSub:"ஒவ்வொரு ரெப்பும், ஒவ்வொரு உணவும் உங்கள் எதிர்காலத்தை கட்டமைக்கிறது.",
+    missedAlert:"வணக்கம் {name}! கடந்த உடற்பயிற்சியை தவறவிட்டீர்கள். இன்று மீண்டும் தொடங்குங்கள்!",
+    goalBulk:"தசை வளர்ப்பு",goalLean:"மெலிதாக்குதல்",goalMaintain:"பராமரிக்க",
+    reminders:["💧 தினமும் குறைந்தது 3 லிட்டர் தண்ணீர் குடிக்கவும்","😴 தசை மீட்சிக்கு 7-9 மணி நேரம் தூங்கவும்","📊 தினமும் உணவை கண்காணிக்கவும்","🏃 ஒவ்வொரு அமர்வுக்கும் முன் வார்ம் அப் செய்யவும்","🧘 ஓய்வு நாட்களும் திட்டத்தின் ஒரு பகுதி"],
+    milestones:["சுயவிவரம் உருவாக்கப்பட்டது","முதல் உடற்பயிற்சி பதிவு","5 உடற்பயிற்சிகள் முடிந்தன","10 உடற்பயிற்சிகள் முடிந்தன","முதல் எடை பதிவு","7 நாள் தொடர்"],
+    achieved:"சாதித்தீர்கள்",
+    wofocus:{gain:"கவனம்: தசை வளர்ப்புக்கு கலவை உயர்த்துதல்",lean:"கவனம்: கொழுப்பு எரிப்புக்கு கார்டியோ",maintain:"கவனம்: சமச்சீர் வலிமை"},
+    totalWorkouts:"மொத்தம்: {n} உடற்பயிற்சிகள்",
+    goalBadgeDefault:"கீழே உங்கள் இலக்கை அமைக்கவும்",
+  },
+  te:{
+    welcome:"స్వాగతం, ఛాంపియన్!",langLabel:"మీ భాషను ఎంచుకోండి",langSub:"అన్ని కంటెంట్ మీరు ఎంచుకున్న భాషలో చూపబడుతుంది",
+    inspireTitle:"మీ యాత్ర ఒక అడుగుతో మొదలవుతుంది.",inspireSub:"దిగువ మీ వివరాలు నమోదు చేయండి.",
+    formTitle:"🧬 వ్యక్తిగత వివరాలు",lName:"పూర్తి పేరు",lAge:"వయస్సు (సంవత్సరాలు)",lWeight:"బరువు (కిలోలు)",lHeight:"ఎత్తు (సెమీ)",
+    lSex:"లింగం",oMale:"పురుషుడు",oFemale:"స్త్రీ",lFrame:"శరీర నిర్మాణం",oSmall:"చిన్నది",oMedium:"మధ్యస్థం",oLarge:"పెద్దది",
+    lActivity:"కార్యకలాపాల స్థాయి",oSed:"నిష్క్రియ",oLight:"తేలికైన",oMod:"మితమైన",oActive:"చురుకైన",oVery:"చాలా చురుకైన",
+    lGoal:"ఫిట్‌నెస్ లక్ష్యం",oGain:"కండరాల పెంపు",oLean:"సన్నగా అవ్వడం",oMaintain:"నిర్వహించు",
+    saveBtn:"🔥 నా ఫిట్‌నెస్ ప్లాన్ తయారు చేయి",statsTitle:"మీ రోజువారీ లక్ష్యాలు",
+    sBMRLabel:"BMR",sBMRSub:"ప్రాథమిక రేటు",sTDEELabel:"TDEE",sTDEESub:"రోజువారీ శక్తి",sTargetLabel:"లక్ష్యం",sTargetSub:"కేలరీ లక్ష్యం",sGoalLabel:"లక్ష్యం",sGoalSub:"మీ దృష్టి",
+    savedMsg:"ప్రొఫైల్ సేవ్ అయింది! మీ ప్లాన్ సిద్ధం.",savedSub:"న్యూట్రిషన్ మరియు వర్కౌట్ ట్యాబ్‌లకు వెళ్ళండి.",
+    nutTitle:"పోషణ ప్రణాళిక",noProfileMsg:"దయచేసి ముందు మీ ప్రొఫైల్ సేవ్ చేయండి.",
+    nProteinLabel:"ప్రొటీన్ / రోజు",nCarbsLabel:"కార్బ్స్ / రోజు",nFatLabel:"కొవ్వు / రోజు",
+    woPageTitle:"వర్కౌట్",woTitle:"ఈరోజు వర్కౌట్",woHistTitle:"వర్కౌట్ చరిత్ర",noWoMsg:"ఇంకా వర్కౌట్ నమోదు కాలేదు.",woBtn:"వర్కౌట్ పూర్తయింది",woDoneBtn:"నమోదైంది!",
+    exPageTitle:"వ్యాయామ గైడ్",exSubtitle:"సరైన ఫారమ్ చూడటానికి డెమో లింక్ నొక్కండి.",
+    progPageTitle:"పురోగతి ట్రాకర్",weightLabel:"ఈరోజు బరువు నమోదు చేయండి (కిలోలు)",logBtn:"నమోదు",chartTitle:"సమయంతో బరువు",noChartTxt:"చార్ట్ చూడటానికి కనీసం 2 నమోదులు అవసరం.",
+    aiTitle:"AI కోచ్ సూచన",aiBtn:"AI కోచ్ సూచన పొందండి",aiLoading:"విశ్లేషిస్తోంది...",
+    quoteLabelTxt:"ఈరోజు కోట్",newQuoteBtn:"కొత్త కోట్",
+    milestoneTitle:"మీ మైలురాళ్ళు",remindersTitle:"రోజువారీ గుర్తుపోలికలు",
+    motWorkoutsLabel:"వర్కౌట్‌లు పూర్తయ్యాయి",motStreakLabel:"రోజుల వరుస",
+    closingTitle:"మీరు అనుకున్నదానికంటే బలంగా ఉన్నారు",closingSub:"ప్రతి రెప్, ప్రతి భోజనం మీ భవిష్యత్తు నిర్మిస్తుంది.",
+    missedAlert:"హాయ్ {name}! మీరు చివరి వర్కౌట్ మిస్ చేశారు. ఈరోజు తిరిగి ప్రారంభించండి!",
+    goalBulk:"కండరాల పెంపు",goalLean:"సన్నగా",goalMaintain:"నిర్వహించు",
+    reminders:["💧 రోజూ కనీసం 3 లీటర్ల నీరు తాగండి","😴 కండరాల రికవరీ కోసం 7-9 గంటలు నిద్రపోండి","📊 రోజూ మీ భోజనాన్ని ట్రాక్ చేయండి","🏃 ప్రతి సెషన్ ముందు వార్మ్ అప్ చేయండి","🧘 విశ్రాంతి రోజులు కూడా ప్లాన్‌లో భాగం"],
+    milestones:["ప్రొఫైల్ తయారైంది","మొదటి వర్కౌట్ నమోదు","5 వర్కౌట్‌లు పూర్తి","10 వర్కౌట్‌లు పూర్తి","మొదటి బరువు నమోదు","7 రోజుల వరుస"],
+    achieved:"సాధించారు",
+    wofocus:{gain:"దృష్టి: కండరాల పెంపు",lean:"దృష్టి: కొవ్వు తగ్గింపు",maintain:"దృష్టి: సమతుల్య బలం"},
+    totalWorkouts:"మొత్తం: {n} వర్కౌట్‌లు పూర్తయ్యాయి",
+    goalBadgeDefault:"దిగువ మీ లక్ష్యాన్ని సెట్ చేయండి",
+  },
+  kn:{
+    welcome:"ಸ್ವಾಗತ, ಚಾಂಪಿಯನ್!",langLabel:"ನಿಮ್ಮ ಭಾಷೆಯನ್ನು ಆಯ್ಕೆ ಮಾಡಿ",langSub:"ಎಲ್ಲಾ ವಿಷಯವು ಆಯ್ಕೆ ಮಾಡಿದ ಭಾಷೆಯಲ್ಲಿ ತೋರಿಸಲಾಗುವುದು",
+    inspireTitle:"ನಿಮ್ಮ ಪ್ರಯಾಣ ಒಂದು ಹೆಜ್ಜೆಯಿಂದ ಪ್ರಾರಂಭವಾಗುತ್ತದೆ.",inspireSub:"ಕೆಳಗೆ ನಿಮ್ಮ ವಿವರಗಳನ್ನು ಭರ್ತಿ ಮಾಡಿ.",
+    formTitle:"🧬 ವೈಯಕ್ತಿಕ ವಿವರಗಳು",lName:"ಪೂರ್ಣ ಹೆಸರು",lAge:"ವಯಸ್ಸು (ವರ್ಷಗಳು)",lWeight:"ತೂಕ (ಕಿಗ್ರಾ)",lHeight:"ಎತ್ತರ (ಸೆಮೀ)",
+    lSex:"ಲಿಂಗ",oMale:"ಪುರುಷ",oFemale:"ಮಹಿಳೆ",lFrame:"ದೇಹದ ರಚನೆ",oSmall:"ಚಿಕ್ಕದು",oMedium:"ಮಧ್ಯಮ",oLarge:"ದೊಡ್ಡದು",
+    lActivity:"ಚಟುವಟಿಕೆ ಮಟ್ಟ",oSed:"ನಿಷ್ಕ್ರಿಯ",oLight:"ಹಗುರ",oMod:"ಮಧ್ಯಮ",oActive:"ಸಕ್ರಿಯ",oVery:"ತುಂಬಾ ಸಕ್ರಿಯ",
+    lGoal:"ಫಿಟ್‌ನೆಸ್ ಗುರಿ",oGain:"ಸ್ನಾಯು ನಿರ್ಮಾಣ",oLean:"ತೆಳ್ಳಗಾಗು",oMaintain:"ನಿರ್ವಹಿಸು",
+    saveBtn:"🔥 ನನ್ನ ಫಿಟ್‌ನೆಸ್ ಪ್ಲಾನ್ ತಯಾರಿಸು",statsTitle:"ನಿಮ್ಮ ದೈನಂದಿನ ಗುರಿಗಳು",
+    sBMRLabel:"BMR",sBMRSub:"ಮೂಲ ದರ",sTDEELabel:"TDEE",sTDEESub:"ದೈನಂದಿನ ಶಕ್ತಿ",sTargetLabel:"ಗುರಿ",sTargetSub:"ಕ್ಯಾಲೋರಿ ಗುರಿ",sGoalLabel:"ಗುರಿ",sGoalSub:"ನಿಮ್ಮ ಗಮನ",
+    savedMsg:"ಪ್ರೊಫೈಲ್ ಉಳಿಸಲಾಗಿದೆ! ನಿಮ್ಮ ಯೋಜನೆ ಸಿದ್ಧ.",savedSub:"ಪ್ರಾರಂಭಿಸಲು ಪೋಷಣೆ ಮತ್ತು ವ್ಯಾಯಾಮ ಟ್ಯಾಬ್‌ಗಳಿಗೆ ಹೋಗಿ.",
+    nutTitle:"ಪೌಷ್ಟಿಕಾಂಶ ಯೋಜನೆ",noProfileMsg:"ದಯವಿಟ್ಟು ಮೊದಲು ನಿಮ್ಮ ಪ್ರೊಫೈಲ್ ಉಳಿಸಿ.",
+    nProteinLabel:"ಪ್ರೋಟೀನ್ / ದಿನ",nCarbsLabel:"ಕಾರ್ಬ್ಸ್ / ದಿನ",nFatLabel:"ಕೊಬ್ಬು / ದಿನ",
+    woPageTitle:"ವ್ಯಾಯಾಮ",woTitle:"ಇಂದಿನ ವ್ಯಾಯಾಮ",woHistTitle:"ವ್ಯಾಯಾಮ ಇತಿಹಾಸ",noWoMsg:"ಇನ್ನೂ ವ್ಯಾಯಾಮ ದಾಖಲಿಸಿಲ್ಲ.",woBtn:"ವ್ಯಾಯಾಮ ಮುಗಿದಿದೆ",woDoneBtn:"ದಾಖಲಿಸಲಾಗಿದೆ!",
+    exPageTitle:"ವ್ಯಾಯಾಮ ಮಾರ್ಗದರ್ಶಿ",exSubtitle:"ಸರಿಯಾದ ಫಾರ್ಮ್ ನೋಡಲು ಡೆಮೊ ಲಿಂಕ್ ಟ್ಯಾಪ್ ಮಾಡಿ.",
+    progPageTitle:"ಪ್ರಗತಿ ಟ್ರ್ಯಾಕರ್",weightLabel:"ಇಂದಿನ ತೂಕ ದಾಖಲಿಸಿ (ಕಿಗ್ರಾ)",logBtn:"ದಾಖಲಿಸು",chartTitle:"ಸಮಯದೊಂದಿಗೆ ತೂಕ",noChartTxt:"ಚಾರ್ಟ್ ನೋಡಲು ಕನಿಷ್ಠ 2 ದಾಖಲೆಗಳು ಬೇಕು.",
+    aiTitle:"AI ಕೋಚ್ ಸಲಹೆ",aiBtn:"AI ಕೋಚ್ ಸಲಹೆ ಪಡೆಯಿರಿ",aiLoading:"ವಿಶ್ಲೇಷಿಸಲಾಗುತ್ತಿದೆ...",
+    quoteLabelTxt:"ಇಂದಿನ ಉಲ್ಲೇಖ",newQuoteBtn:"ಹೊಸ ಉಲ್ಲೇಖ",
+    milestoneTitle:"ನಿಮ್ಮ ಸಾಧನೆಗಳು",remindersTitle:"ದೈನಂದಿನ ಜ್ಞಾಪನೆಗಳು",
+    motWorkoutsLabel:"ವ್ಯಾಯಾಮಗಳು ಮುಗಿದಿವೆ",motStreakLabel:"ದಿನಗಳ ಸರಣಿ",
+    closingTitle:"ನೀವು ಯೋಚಿಸುವುದಕ್ಕಿಂತ ಬಲಶಾಲಿ",closingSub:"ಪ್ರತಿ ರೆಪ್, ಪ್ರತಿ ಊಟ ನಿಮ್ಮ ಭವಿಷ್ಯ ನಿರ್ಮಿಸುತ್ತದೆ.",
+    missedAlert:"ಹಲೋ {name}! ನೀವು ಕಳೆದ ವ್ಯಾಯಾಮ ತಪ್ಪಿಸಿಕೊಂಡಿದ್ದೀರಿ. ಇಂದು ಮತ್ತೆ ಪ್ರಾರಂಭಿಸಿ!",
+    goalBulk:"ಸ್ನಾಯು ನಿರ್ಮಾಣ",goalLean:"ತೆಳ್ಳಗಾಗು",goalMaintain:"ನಿರ್ವಹಿಸು",
+    reminders:["💧 ಪ್ರತಿದಿನ ಕನಿಷ್ಠ 3 ಲೀಟರ್ ನೀರು ಕುಡಿಯಿರಿ","😴 ಸ್ನಾಯು ಚೇತರಿಕೆಗೆ 7-9 ಗಂಟೆ ನಿದ್ರೆ ಮಾಡಿ","📊 ಪ್ರತಿದಿನ ಆಹಾರ ಟ್ರ್ಯಾಕ್ ಮಾಡಿ","🏃 ಪ್ರತಿ ಸೆಷನ್ ಮೊದಲು ವಾರ್ಮ್ ಅಪ್ ಮಾಡಿ","🧘 ವಿಶ್ರಾಂತಿ ದಿನಗಳೂ ಯೋಜನೆಯ ಭಾಗ"],
+    milestones:["ಪ್ರೊಫೈಲ್ ರಚಿಸಲಾಗಿದೆ","ಮೊದಲ ವ್ಯಾಯಾಮ ದಾಖಲು","5 ವ್ಯಾಯಾಮಗಳು ಮುಗಿದಿವೆ","10 ವ್ಯಾಯಾಮಗಳು ಮುಗಿದಿವೆ","ಮೊದಲ ತೂಕ ದಾಖಲು","7 ದಿನಗಳ ಸರಣಿ"],
+    achieved:"ಸಾಧಿಸಿದ್ದೀರಿ",
+    wofocus:{gain:"ಗಮನ: ಸ್ನಾಯು ನಿರ್ಮಾಣ",lean:"ಗಮನ: ಕೊಬ್ಬು ಸುಡುವಿಕೆ",maintain:"ಗಮನ: ಸಮತೋಲಿತ ಶಕ್ತಿ"},
+    totalWorkouts:"ಒಟ್ಟು: {n} ವ್ಯಾಯಾಮಗಳು",
+    goalBadgeDefault:"ಕೆಳಗೆ ನಿಮ್ಮ ಗುರಿ ಆಯ್ಕೆ ಮಾಡಿ",
+  },
+  ml:{
+    welcome:"സ്വാഗതം, ചാംപ്യൻ!",langLabel:"നിങ്ങളുടെ ഭാഷ തിരഞ്ഞെടുക്കുക",langSub:"എല്ലാ ഉള്ളടക്കവും തിരഞ്ഞെടുത്ത ഭാഷയിൽ കാണിക്കും",
+    inspireTitle:"നിങ്ങളുടെ യാത്ര ഒരു ചുവടിൽ നിന്ന് ആരംഭിക്കുന്നു.",inspireSub:"താഴെ നിങ്ങളുടെ വിവരങ്ങൾ നൽകുക.",
+    formTitle:"🧬 വ്യക്തിഗത വിവരങ്ങൾ",lName:"പൂർണ്ണ നാമം",lAge:"പ്രായം (വർഷങ്ങൾ)",lWeight:"ഭാരം (കിലോ)",lHeight:"ഉയരം (സെ.മീ)",
+    lSex:"ലിംഗം",oMale:"പുരുഷൻ",oFemale:"സ്ത്രീ",lFrame:"ശരീര ഘടന",oSmall:"ചെറുത്",oMedium:"ഇടത്തരം",oLarge:"വലുത്",
+    lActivity:"പ്രവർത്തന നില",oSed:"നിഷ്ക്രിയ",oLight:"ലഘു",oMod:"മിതമായ",oActive:"സജീവ",oVery:"വളരെ സജീവ",
+    lGoal:"ഫിറ്റ്നസ് ലക്ഷ്യം",oGain:"പേശി വർദ്ധന",oLean:"മെലിഞ്ഞത്",oMaintain:"നിലനിർത്തുക",
+    saveBtn:"🔥 എന്റെ ഫിറ്റ്നസ് പ്ലാൻ ഉണ്ടാക്കുക",statsTitle:"നിങ്ങളുടെ ദൈനംദിന ലക്ഷ്യങ്ങൾ",
+    sBMRLabel:"BMR",sBMRSub:"അടിസ്ഥാന നിരക്ക്",sTDEELabel:"TDEE",sTDEESub:"ദൈനംദിന ഊർജ്ജം",sTargetLabel:"ലക്ഷ്യം",sTargetSub:"കലോറി ലക്ഷ്യം",sGoalLabel:"ലക്ഷ്യം",sGoalSub:"നിങ്ങളുടെ ശ്രദ്ധ",
+    savedMsg:"പ്രൊഫൈൽ സേവ് ചെയ്തു! നിങ്ങളുടെ പ്ലാൻ തയ്യാർ.",savedSub:"ആരംഭിക്കാൻ ന്യൂട്രിഷൻ, വർക്കൗട്ട് ടാബുകളിലേക്ക് പോകുക.",
+    nutTitle:"പോഷകാഹാര പദ്ധതി",noProfileMsg:"ആദ്യം നിങ്ങളുടെ പ്രൊഫൈൽ സേവ് ചെയ്യുക.",
+    nProteinLabel:"പ്രോട്ടീൻ / ദിവസം",nCarbsLabel:"കാർബ്സ് / ദിവസം",nFatLabel:"കൊഴുപ്പ് / ദിവസം",
+    woPageTitle:"വർക്കൗട്ട്",woTitle:"ഇന്നത്തെ വർക്കൗട്ട്",woHistTitle:"വർക്കൗട്ട് ചരിത്രം",noWoMsg:"ഇതുവരെ ഒന്നും രേഖപ്പെടുത്തിയിട്ടില്ല.",woBtn:"വർക്കൗട്ട് പൂർത്തിയായി",woDoneBtn:"രേഖപ്പെടുത്തി!",
+    exPageTitle:"വ്യായാമ ഗൈഡ്",exSubtitle:"ശരിയായ ഫോം കാണാൻ ഡെമോ ലിങ്ക് ടാപ്പ് ചെയ്യുക.",
+    progPageTitle:"പുരോഗതി ട്രാക്കർ",weightLabel:"ഇന്നത്തെ ഭാരം രേഖപ്പെടുത്തുക (കിലോ)",logBtn:"രേഖപ്പെടുത്തുക",chartTitle:"കാലക്രമേണ ഭാരം",noChartTxt:"ചാർട്ട് കാണാൻ കുറഞ്ഞത് 2 എൻട്രികൾ വേണം.",
+    aiTitle:"AI കോച്ച് നിർദ്ദേശം",aiBtn:"AI നിർദ്ദേശം നേടുക",aiLoading:"വിശകലനം ചെയ്യുന്നു...",
+    quoteLabelTxt:"ഇന്നത്തെ ഉദ്ധരണി",newQuoteBtn:"പുതിയ ഉദ്ധരണി",
+    milestoneTitle:"നിങ്ങളുടെ നേട്ടങ്ങൾ",remindersTitle:"ദൈനംദിന ഓർമ്മപ്പെടുത്തലുകൾ",
+    motWorkoutsLabel:"വർക്കൗട്ടുകൾ പൂർത്തിയായി",motStreakLabel:"ദിവസങ്ങളുടെ ശ്രേണി",
+    closingTitle:"നിങ്ങൾ കരുതുന്നതിലും ശക്തരാണ്",closingSub:"ഓരോ റെപ്പും, ഓരോ ഭക്ഷണവും നിങ്ങളുടെ ഭാവി നിർമ്മിക്കുന്നു.",
+    missedAlert:"ഹലോ {name}! നിങ്ങൾ കഴിഞ്ഞ വർക്കൗട്ട് നഷ്ടപ്പെടുത്തി. ഇന്ന് വീണ്ടും ആരംഭിക്കുക!",
+    goalBulk:"പേശി വർദ്ധന",goalLean:"മെലിഞ്ഞത്",goalMaintain:"നിലനിർത്തുക",
+    reminders:["💧 ദിവസവും കുറഞ്ഞത് 3 ലിറ്റർ വെള്ളം കുടിക്കുക","😴 7-9 മണിക്കൂർ ഉറക്കം ലഭ്യമാക്കുക","📊 ദിവസവും ഭക്ഷണം ട്രാക്ക് ചെയ്യുക","🏃 ഓരോ സെഷനു മുൻപും വാം അപ്പ് ചെയ്യുക","🧘 വിശ്രമ ദിനങ്ങളും പദ്ധതിയുടെ ഭാഗം"],
+    milestones:["പ്രൊഫൈൽ സൃഷ്ടിച്ചു","ആദ്യ വർക്കൗട്ട് രേഖപ്പെടുത്തി","5 വർക്കൗട്ടുകൾ പൂർത്തി","10 വർക്കൗട്ടുകൾ പൂർത്തി","ആദ്യ ഭാരം രേഖപ്പെടുത്തി","7 ദിവസ ശ്രേണി"],
+    achieved:"നേടി",
+    wofocus:{gain:"ശ്രദ്ധ: പേശി നിർമ്മാണം",lean:"ശ്രദ്ധ: കൊഴുപ്പ് കത്തിക്കൽ",maintain:"ശ്രദ്ധ: സമതുലിത ശക്തി"},
+    totalWorkouts:"ആകെ: {n} വർക്കൗട്ടുകൾ",
+    goalBadgeDefault:"താഴെ നിങ്ങളുടെ ലക്ഷ്യം സജ്ജമാക്കുക",
+  },
+  mr:{welcome:"स्वागत आहे, चॅम्पियन!",langLabel:"आपली भाषा निवडा",langSub:"सर्व मजकूर निवडलेल्या भाषेत दिसेल",inspireTitle:"आपला प्रवास एका पावलाने सुरू होतो.",inspireSub:"खाली आपले तपशील भरा.",formTitle:"🧬 वैयक्तिक तपशील",lName:"पूर्ण नाव",lAge:"वय (वर्षे)",lWeight:"वजन (किलो)",lHeight:"उंची (सेमी)",lSex:"लिंग",oMale:"पुरुष",oFemale:"स्त्री",lFrame:"शरीर रचना",oSmall:"लहान",oMedium:"मध्यम",oLarge:"मोठे",lActivity:"क्रियाकलाप पातळी",oSed:"निष्क्रिय",oLight:"हलके",oMod:"मध्यम",oActive:"सक्रिय",oVery:"खूप सक्रिय",lGoal:"फिटनेस उद्दिष्ट",oGain:"स्नायू वाढवा",oLean:"पातळ व्हा",oMaintain:"टिकवा",saveBtn:"🔥 माझी फिटनेस योजना तयार करा",statsTitle:"आपले दैनिक लक्ष्य",sBMRLabel:"BMR",sBMRSub:"मूळ दर",sTDEELabel:"TDEE",sTDEESub:"दैनिक ऊर्जा",sTargetLabel:"लक्ष्य",sTargetSub:"कॅलरी लक्ष्य",sGoalLabel:"ध्येय",sGoalSub:"आपला फोकस",savedMsg:"प्रोफाइल जतन केले! आपली योजना तयार आहे.",savedSub:"पोषण आणि वर्कआउट टॅबवर जा.",nutTitle:"पोषण योजना",noProfileMsg:"कृपया आधी आपले प्रोफाइल जतन करा.",nProteinLabel:"प्रथिने / दिवस",nCarbsLabel:"कार्ब्स / दिवस",nFatLabel:"चरबी / दिवस",woPageTitle:"वर्कआउट",woTitle:"आजचा वर्कआउट",woHistTitle:"वर्कआउट इतिहास",noWoMsg:"अद्याप कोणताही वर्कआउट नोंदवला नाही.",woBtn:"वर्कआउट पूर्ण झाले",woDoneBtn:"नोंदवले!",exPageTitle:"व्यायाम मार्गदर्शक",exSubtitle:"डेमो लिंकवर टॅप करा.",progPageTitle:"प्रगती ट्रॅकर",weightLabel:"आजचे वजन नोंदवा (किलो)",logBtn:"नोंदवा",chartTitle:"वेळानुसार वजन",noChartTxt:"चार्ट पाहण्यासाठी किमान 2 नोंदी आवश्यक आहेत.",aiTitle:"AI कोच सूचना",aiBtn:"AI कोच सूचना मिळवा",aiLoading:"विश्लेषण करत आहे...",quoteLabelTxt:"आजचा उद्धरण",newQuoteBtn:"नवीन उद्धरण",milestoneTitle:"आपले मैलाचे दगड",remindersTitle:"दैनिक स्मरणपत्रे",motWorkoutsLabel:"वर्कआउट पूर्ण",motStreakLabel:"दिवसांची मालिका",closingTitle:"तुम्ही विचार करतात त्यापेक्षा अधिक मजबूत आहात",closingSub:"प्रत्येक रेप, प्रत्येक जेवण आपले भविष्य घडवते.",missedAlert:"नमस्ते {name}! तुम्ही शेवटचा वर्कआउट चुकवला. आज पुन्हा सुरू करा!",goalBulk:"स्नायू वाढवा",goalLean:"पातळ",goalMaintain:"टिकवा",reminders:["💧 दररोज किमान 3 लिटर पाणी प्या","😴 7-9 तास झोपा","📊 दररोज आहार ट्रॅक करा","🏃 प्रत्येक सत्राआधी वार्म अप करा","🧘 विश्रांतीचे दिवस देखील योजनेचा भाग आहेत"],milestones:["प्रोफाइल तयार केले","पहिला वर्कआउट नोंदवला","5 वर्कआउट पूर्ण","10 वर्कआउट पूर्ण","पहिले वजन नोंदवले","7 दिवसांची मालिका"],achieved:"साधले",wofocus:{gain:"फोकस: स्नायू वाढवणे",lean:"फोकस: चरबी जाळणे",maintain:"फोकस: संतुलित शक्ती"},totalWorkouts:"एकूण: {n} वर्कआउट पूर्ण",goalBadgeDefault:"खाली आपले ध्येय सेट करा"},
+  bn:{welcome:"স্বাগতম, চ্যাম্পিয়ন!",langLabel:"আপনার ভাষা বেছে নিন",langSub:"সমস্ত বিষয়বস্তু নির্বাচিত ভাষায় দেখানো হবে",inspireTitle:"আপনার যাত্রা একটি পদক্ষেপ থেকে শুরু হয়।",inspireSub:"নীচে আপনার বিবরণ পূরণ করুন।",formTitle:"🧬 ব্যক্তিগত তথ্য",lName:"পুরো নাম",lAge:"বয়স (বছর)",lWeight:"ওজন (কেজি)",lHeight:"উচ্চতা (সেমি)",lSex:"লিঙ্গ",oMale:"পুরুষ",oFemale:"মহিলা",lFrame:"শরীরের গঠন",oSmall:"ছোট",oMedium:"মাঝারি",oLarge:"বড়",lActivity:"কার্যকলাপ স্তর",oSed:"নিষ্ক্রিয়",oLight:"হালকা",oMod:"মাঝারি",oActive:"সক্রিয়",oVery:"অত্যন্ত সক্রিয়",lGoal:"ফিটনেস লক্ষ্য",oGain:"পেশী বাড়ান",oLean:"চর্বি কমান",oMaintain:"বজায় রাখুন",saveBtn:"🔥 আমার ফিটনেস প্ল্যান তৈরি করুন",statsTitle:"আপনার দৈনিক লক্ষ্যমাত্রা",sBMRLabel:"BMR",sBMRSub:"মূল হার",sTDEELabel:"TDEE",sTDEESub:"দৈনিক শক্তি",sTargetLabel:"লক্ষ্য",sTargetSub:"ক্যালোরি লক্ষ্য",sGoalLabel:"লক্ষ্য",sGoalSub:"আপনার ফোকাস",savedMsg:"প্রোফাইল সংরক্ষিত! আপনার পরিকল্পনা প্রস্তুত।",savedSub:"পুষ্টি ও ওয়ার্কআউট ট্যাবে যান।",nutTitle:"পুষ্টি পরিকল্পনা",noProfileMsg:"অনুগ্রহ করে প্রথমে আপনার প্রোফাইল সংরক্ষণ করুন।",nProteinLabel:"প্রোটিন / দিন",nCarbsLabel:"কার্বস / দিন",nFatLabel:"চর্বি / দিন",woPageTitle:"ওয়ার্কআউট",woTitle:"আজকের ওয়ার্কআউট",woHistTitle:"ওয়ার্কআউট ইতিহাস",noWoMsg:"এখনো কোনো ওয়ার্কআউট লগ হয়নি।",woBtn:"ওয়ার্কআউট সম্পন্ন",woDoneBtn:"লগ হয়েছে!",exPageTitle:"ব্যায়াম গাইড",exSubtitle:"সঠিক ফর্ম দেখতে ডেমো লিঙ্কে ট্যাপ করুন।",progPageTitle:"অগ্রগতি ট্র্যাকার",weightLabel:"আজকের ওজন লগ করুন (কেজি)",logBtn:"লগ",chartTitle:"সময়ের সাথে ওজন",noChartTxt:"চার্ট দেখতে কমপক্ষে 2টি এন্ট্রি প্রয়োজন।",aiTitle:"AI কোচ পরামর্শ",aiBtn:"AI পরামর্শ নিন",aiLoading:"বিশ্লেষণ করা হচ্ছে...",quoteLabelTxt:"আজকের উদ্ধৃতি",newQuoteBtn:"নতুন উদ্ধৃতি",milestoneTitle:"আপনার মাইলফলক",remindersTitle:"দৈনিক অনুস্মারক",motWorkoutsLabel:"ওয়ার্কআউট সম্পন্ন",motStreakLabel:"দিনের ধারা",closingTitle:"আপনি যতটা ভাবেন তার চেয়ে শক্তিশালী",closingSub:"প্রতিটি রেপ, প্রতিটি খাবার আপনার ভবিষ্যৎ গড়ে তোলে।",missedAlert:"হ্যালো {name}! আপনি শেষ ওয়ার্কআউট মিস করেছেন। আজ আবার শুরু করুন!",goalBulk:"পেশী বাড়ান",goalLean:"চর্বি কমান",goalMaintain:"বজায় রাখুন",reminders:["💧 প্রতিদিন কমপক্ষে 3 লিটার পানি পান করুন","😴 7-9 ঘণ্টা ঘুমান","📊 প্রতিদিন খাবার ট্র্যাক করুন","🏃 প্রতিটি সেশনের আগে ওয়ার্মআপ করুন","🧘 বিশ্রামের দিনগুলোও পরিকল্পনার অংশ"],milestones:["প্রোফাইল তৈরি হয়েছে","প্রথম ওয়ার্কআউট লগ","5টি ওয়ার্কআউট সম্পন্ন","10টি ওয়ার্কআউট সম্পন্ন","প্রথম ওজন লগ","7 দিনের ধারা"],achieved:"অর্জিত",wofocus:{gain:"ফোকাস: পেশী তৈরি",lean:"ফোকাস: চর্বি পোড়ানো",maintain:"ফোকাস: সুষম শক্তি"},totalWorkouts:"মোট: {n}টি ওয়ার্কআউট",goalBadgeDefault:"নীচে আপনার লক্ষ্য নির্ধারণ করুন"},
+  gu:{welcome:"સ્વાગત છે, ચેમ્પિયન!",langLabel:"તમારી ભાષા પસંદ કરો",langSub:"બધી સામગ્રી પસંદ કરેલ ભાષામાં દેખાશે",inspireTitle:"તમારી યાત્રા એક પગલાથી શરૂ થાય છે.",inspireSub:"નીચે તમારી વિગતો ભરો.",formTitle:"🧬 વ્યક્તિગત વિગતો",lName:"પૂરું નામ",lAge:"ઉંમર (વર્ષ)",lWeight:"વજન (કિગ્રા)",lHeight:"ઊંચાઈ (સે.મી.)",lSex:"લિંગ",oMale:"પુરુષ",oFemale:"સ્ત્રી",lFrame:"શરીરનો બાંધો",oSmall:"નાનો",oMedium:"મધ્યમ",oLarge:"મોટો",lActivity:"પ્રવૃત્તિ સ્તર",oSed:"નિષ્ક્રિય",oLight:"હળવો",oMod:"મધ્યમ",oActive:"સક્રિય",oVery:"ખૂબ સક્રિય",lGoal:"ફિટનેસ લક્ષ્ય",oGain:"સ્નાયુ વધારો",oLean:"પાતળા બનો",oMaintain:"જાળવો",saveBtn:"🔥 મારી ફિટનેસ યોજના બનાવો",statsTitle:"તમારા દૈનિક લક્ષ્યો",sBMRLabel:"BMR",sBMRSub:"મૂળ દર",sTDEELabel:"TDEE",sTDEESub:"દૈનિક ઊર્જા",sTargetLabel:"લક્ષ્ય",sTargetSub:"કૅલરી લક્ષ્ય",sGoalLabel:"લક્ષ્ય",sGoalSub:"તમારું ધ્યાન",savedMsg:"પ્રોફાઇલ સાચવ્યું! તમારી યોજના તૈયાર છે.",savedSub:"શરૂ કરવા માટે ન્યુટ્રિશન અને વર્કઆઉટ ટૅબ પર જાઓ.",nutTitle:"પોષણ યોજના",noProfileMsg:"કૃપા કરીને પહેલા પ્રોફાઇલ સાચવો.",nProteinLabel:"પ્રોટીન / દિવસ",nCarbsLabel:"કાર્બ્સ / દિવસ",nFatLabel:"ચરબી / દિવસ",woPageTitle:"વર્કઆઉટ",woTitle:"આજનો વર્કઆઉટ",woHistTitle:"વર્કઆઉટ ઇતિહાસ",noWoMsg:"હજી કોઈ વર્કઆઉટ નોંધ્યો નથી.",woBtn:"વર્કઆઉટ પૂર્ણ",woDoneBtn:"નોંધ્યું!",exPageTitle:"કસરત માર્ગદર્શિકા",exSubtitle:"ડેમો લિંક પર ટૅપ કરો.",progPageTitle:"પ્રગતિ ટ્રૅકર",weightLabel:"આજનું વજન નોંધો (કિગ્રા)",logBtn:"નોંધો",chartTitle:"સમય સાથે વજન",noChartTxt:"ચાર્ટ જોવા ઓછામાં ઓછી 2 નોંધ જરૂરી.",aiTitle:"AI કોચ સૂચન",aiBtn:"AI સૂચન મેળવો",aiLoading:"વિશ્લેષણ...",quoteLabelTxt:"આજનો અવતરણ",newQuoteBtn:"નવો અવતરણ",milestoneTitle:"તમારી સિદ્ધિઓ",remindersTitle:"દૈનિક રિમાઇન્ડર",motWorkoutsLabel:"વર્કઆઉટ પૂર્ણ",motStreakLabel:"દિવસોની શ્રૃંખલા",closingTitle:"તમે વિચારો છો તેના કરતાં વધારે મજબૂત છો",closingSub:"દરેક રેપ, દરેક ભોજન તમારું ભવિષ્ય ઘડે છે.",missedAlert:"નમસ્તે {name}! તમે છેલ્લો વર્કઆઉટ ચૂક્યા. આજે ફરી શરૂ કરો!",goalBulk:"સ્નાયુ વધારો",goalLean:"પાતળા",goalMaintain:"જાળવો",reminders:["💧 દરરોજ ઓછામાં ઓછું 3 લિટર પાણી પીઓ","😴 7-9 કલાક ઊઘો","📊 દરરોજ ભોજન ટ્રૅક કરો","🏃 દરેક સત્ર પહેલા વોર્મ અપ કરો","🧘 આરામના દિવસો પણ યોજનાનો ભાગ છે"],milestones:["પ્રોફાઇલ બનાવ્યું","પ્રથમ વર્કઆઉટ નોંધ્યો","5 વર્કઆઉટ પૂર્ણ","10 વર્કઆઉટ પૂર્ણ","પ્રથમ વજન નોંધ્યું","7 દિવસની શ્રૃંખલા"],achieved:"સિદ્ધ",wofocus:{gain:"ધ્યાન: સ્નાયુ વૃદ્ધિ",lean:"ધ્યાન: ચરબી બાળવી",maintain:"ધ્યાન: સંતુલિત શક્તિ"},totalWorkouts:"કુલ: {n} વર્કઆઉટ",goalBadgeDefault:"નીચે તમારું લક્ષ્ય સેટ કરો"},
+  pa:{welcome:"ਜੀ ਆਇਆਂ ਨੂੰ, ਚੈਂਪੀਅਨ!",langLabel:"ਆਪਣੀ ਭਾਸ਼ਾ ਚੁਣੋ",langSub:"ਸਾਰੀ ਸਮੱਗਰੀ ਚੁਣੀ ਭਾਸ਼ਾ ਵਿੱਚ ਦਿਖੇਗੀ",inspireTitle:"ਤੁਹਾਡਾ ਸਫ਼ਰ ਇੱਕ ਕਦਮ ਨਾਲ ਸ਼ੁਰੂ ਹੁੰਦਾ ਹੈ।",inspireSub:"ਹੇਠਾਂ ਆਪਣੀ ਜਾਣਕਾਰੀ ਭਰੋ।",formTitle:"🧬 ਨਿੱਜੀ ਵੇਰਵੇ",lName:"ਪੂਰਾ ਨਾਮ",lAge:"ਉਮਰ (ਸਾਲ)",lWeight:"ਭਾਰ (ਕਿਲੋ)",lHeight:"ਕੱਦ (ਸੈ.ਮੀ.)",lSex:"ਲਿੰਗ",oMale:"ਪੁਰਸ਼",oFemale:"ਔਰਤ",lFrame:"ਸਰੀਰ ਦੀ ਬਣਤਰ",oSmall:"ਛੋਟਾ",oMedium:"ਦਰਮਿਆਨਾ",oLarge:"ਵੱਡਾ",lActivity:"ਸਰਗਰਮੀ ਦਾ ਪੱਧਰ",oSed:"ਅਕਿਰਿਆਸ਼ੀਲ",oLight:"ਹਲਕਾ",oMod:"ਦਰਮਿਆਨਾ",oActive:"ਸਰਗਰਮ",oVery:"ਬਹੁਤ ਸਰਗਰਮ",lGoal:"ਫਿਟਨੈਸ ਟੀਚਾ",oGain:"ਮਾਸਪੇਸ਼ੀ ਵਧਾਓ",oLean:"ਪਤਲੇ ਹੋਵੋ",oMaintain:"ਬਣਾਈ ਰੱਖੋ",saveBtn:"🔥 ਮੇਰੀ ਫਿਟਨੈਸ ਯੋਜਨਾ ਬਣਾਓ",statsTitle:"ਤੁਹਾਡੇ ਰੋਜ਼ਾਨਾ ਟੀਚੇ",sBMRLabel:"BMR",sBMRSub:"ਮੂਲ ਦਰ",sTDEELabel:"TDEE",sTDEESub:"ਰੋਜ਼ਾਨਾ ਊਰਜਾ",sTargetLabel:"ਟੀਚਾ",sTargetSub:"ਕੈਲੋਰੀ ਟੀਚਾ",sGoalLabel:"ਟੀਚਾ",sGoalSub:"ਤੁਹਾਡਾ ਧਿਆਨ",savedMsg:"ਪ੍ਰੋਫਾਈਲ ਸੁਰੱਖਿਅਤ! ਤੁਹਾਡੀ ਯੋਜਨਾ ਤਿਆਰ ਹੈ।",savedSub:"ਸ਼ੁਰੂ ਕਰਨ ਲਈ ਪੋਸ਼ਣ ਅਤੇ ਵਰਕਆਊਟ ਟੈਬਾਂ 'ਤੇ ਜਾਓ।",nutTitle:"ਪੋਸ਼ਣ ਯੋਜਨਾ",noProfileMsg:"ਕਿਰਪਾ ਕਰਕੇ ਪਹਿਲਾਂ ਪ੍ਰੋਫਾਈਲ ਸੁਰੱਖਿਅਤ ਕਰੋ।",nProteinLabel:"ਪ੍ਰੋਟੀਨ / ਦਿਨ",nCarbsLabel:"ਕਾਰਬਸ / ਦਿਨ",nFatLabel:"ਚਰਬੀ / ਦਿਨ",woPageTitle:"ਵਰਕਆਊਟ",woTitle:"ਅੱਜ ਦਾ ਵਰਕਆਊਟ",woHistTitle:"ਵਰਕਆਊਟ ਇਤਿਹਾਸ",noWoMsg:"ਅਜੇ ਕੋਈ ਵਰਕਆਊਟ ਨਹੀਂ।",woBtn:"ਵਰਕਆਊਟ ਪੂਰਾ ਹੋਇਆ",woDoneBtn:"ਰਿਕਾਰਡ ਹੋਇਆ!",exPageTitle:"ਕਸਰਤ ਗਾਈਡ",exSubtitle:"ਸਹੀ ਫਾਰਮ ਦੇਖਣ ਲਈ ਡੈਮੋ ਲਿੰਕ ਟੈਪ ਕਰੋ।",progPageTitle:"ਤਰੱਕੀ ਟਰੈਕਰ",weightLabel:"ਅੱਜ ਦਾ ਭਾਰ ਦਰਜ ਕਰੋ (ਕਿਲੋ)",logBtn:"ਦਰਜ ਕਰੋ",chartTitle:"ਸਮੇਂ ਨਾਲ ਭਾਰ",noChartTxt:"ਚਾਰਟ ਦੇਖਣ ਲਈ ਘੱਟੋ-ਘੱਟ 2 ਐਂਟਰੀਆਂ ਚਾਹੀਦੀਆਂ ਹਨ।",aiTitle:"AI ਕੋਚ ਸੁਝਾਅ",aiBtn:"AI ਸੁਝਾਅ ਲਓ",aiLoading:"ਵਿਸ਼ਲੇਸ਼ਣ...",quoteLabelTxt:"ਅੱਜ ਦਾ ਹਵਾਲਾ",newQuoteBtn:"ਨਵਾਂ ਹਵਾਲਾ",milestoneTitle:"ਤੁਹਾਡੀਆਂ ਉਪਲਬਧੀਆਂ",remindersTitle:"ਰੋਜ਼ਾਨਾ ਯਾਦ ਦਿਵਾਉਣੇ",motWorkoutsLabel:"ਵਰਕਆਊਟ ਪੂਰੇ",motStreakLabel:"ਦਿਨਾਂ ਦੀ ਲੜੀ",closingTitle:"ਤੁਸੀਂ ਸੋਚਦੇ ਹੋ ਉਸ ਨਾਲੋਂ ਵੱਧ ਮਜ਼ਬੂਤ ਹੋ",closingSub:"ਹਰ ਰੈਪ, ਹਰ ਖਾਣਾ ਤੁਹਾਡਾ ਭਵਿੱਖ ਬਣਾਉਂਦਾ ਹੈ।",missedAlert:"ਸਤਿ ਸ੍ਰੀ ਅਕਾਲ {name}! ਪਿਛਲਾ ਵਰਕਆਊਟ ਖੁੰਝ ਗਿਆ। ਅੱਜ ਦੁਬਾਰਾ ਸ਼ੁਰੂ ਕਰੋ!",goalBulk:"ਮਾਸਪੇਸ਼ੀ ਵਧਾਓ",goalLean:"ਪਤਲੇ",goalMaintain:"ਬਣਾਈ ਰੱਖੋ",reminders:["💧 ਹਰ ਰੋਜ਼ ਘੱਟੋ-ਘੱਟ 3 ਲੀਟਰ ਪਾਣੀ ਪੀਓ","😴 7-9 ਘੰਟੇ ਸੌਂਵੋ","📊 ਹਰ ਰੋਜ਼ ਖਾਣਾ ਟਰੈਕ ਕਰੋ","🏃 ਹਰ ਸੈਸ਼ਨ ਤੋਂ ਪਹਿਲਾਂ ਵਾਰਮ ਅੱਪ ਕਰੋ","🧘 ਆਰਾਮ ਦੇ ਦਿਨ ਵੀ ਯੋਜਨਾ ਦਾ ਹਿੱਸਾ ਹਨ"],milestones:["ਪ੍ਰੋਫਾਈਲ ਬਣਾਈ","ਪਹਿਲਾ ਵਰਕਆਊਟ ਦਰਜ","5 ਵਰਕਆਊਟ ਪੂਰੇ","10 ਵਰਕਆਊਟ ਪੂਰੇ","ਪਹਿਲਾ ਭਾਰ ਦਰਜ","7 ਦਿਨਾਂ ਦੀ ਲੜੀ"],achieved:"ਪ੍ਰਾਪਤ",wofocus:{gain:"ਧਿਆਨ: ਮਾਸਪੇਸ਼ੀ ਵਾਧਾ",lean:"ਧਿਆਨ: ਚਰਬੀ ਸਾੜਨਾ",maintain:"ਧਿਆਨ: ਸੰਤੁਲਿਤ ਤਾਕਤ"},totalWorkouts:"ਕੁੱਲ: {n} ਵਰਕਆਊਟ",goalBadgeDefault:"ਹੇਠਾਂ ਆਪਣਾ ਟੀਚਾ ਸੈੱਟ ਕਰੋ"},
 };
+// For remaining languages (or, as, ur, ks, sd, sa, ne, si, mni, kok, mai, doi, sat) fallback to English
+['or','as','ur','ks','sd','sa','ne','si','mni','kok','mai','doi','sat'].forEach(l=>T[l]=T.en);
 
-const QUOTES = [
-  "The only bad workout is the one that didn't happen.",
-  "Push yourself because no one else is going to do it for you.",
-  "Success starts with self-discipline.",
-  "Your body can stand almost anything. It's your mind you have to convince.",
-  "Don't stop when you're tired. Stop when you're done.",
-  "Strive for progress, not perfection.",
-  "The pain you feel today will be the strength you feel tomorrow.",
-  "Fitness is not about being better than someone else. It's about being better than you used to be.",
-  "Take care of your body. It's the only place you have to live.",
-  "Wake up with determination. Go to bed with satisfaction.",
-];
+// ── STATE ──────────────────────────────────────────────
+const state = { profile:null, workouts:[], weights:[], todayDone:false, lang:'en' };
+
+const QUOTES = {
+  en:["The only bad workout is the one that didn't happen.","Push yourself because no one else is going to do it for you.","Success starts with self-discipline.","Don't stop when you're tired. Stop when you're done.","Strive for progress, not perfection."],
+  hi:["एकमात्र बुरी वर्कआउट वह है जो हुई ही नहीं।","खुद को धक्का दो क्योंकि कोई और नहीं देगा।","सफलता अनुशासन से शुरू होती है।","थके होने पर मत रुको। जब काम पूरा हो तब रुको।","प्रगति के लिए प्रयास करो, परिपूर्णता के लिए नहीं।"],
+  ta:["நடக்காத உடற்பயிற்சியே மோசமானது.","உங்களை நீங்களே தள்ளுங்கள்.","வெற்றி ஒழுக்கத்திலிருந்து தொடங்குகிறது.","சோர்வாக இருக்கும்போது நிறுத்தாதீர்கள்.","முன்னேற்றத்திற்கு பாடுபடுங்கள்."],
+  te:["జరగని వర్కౌట్ మాత్రమే చెడ్డది.","మీరే మిమ్మల్ని నెట్టుకోండి.","విజయం క్రమశిక్షణతో మొదలవుతుంది.","అలసిపోయినప్పుడు ఆపకండి.","పురోగతికి కృషి చేయండి."],
+  kn:["ನಡೆಯದ ವ್ಯಾಯಾಮ ಮಾತ್ರ ಕೆಟ್ಟದ್ದು.","ನಿಮ್ಮನ್ನು ನೀವೇ ತಳ್ಳಿಕೊಳ್ಳಿ.","ಯಶಸ್ಸು ಶಿಸ್ತಿನಿಂದ ಆರಂಭವಾಗುತ್ತದೆ.","ದಣಿದಾಗ ನಿಲ್ಲಬೇಡಿ.","ಪ್ರಗತಿಗಾಗಿ ಶ್ರಮಿಸಿ."],
+  ml:["നടക്കാത്ത വർക്കൗട്ട് മാത്രമാണ് മോശം.","നിങ്ങളെ നിങ്ങൾ തന്നെ തള്ളുക.","വിജയം ശൃംഖലയിൽ നിന്ന് ആരംഭിക്കുന്നു.","ക്ഷീണിക്കുമ്പോൾ നിർത്തരുത്.","പുരോഗതിക്കായി ശ്രമിക്കുക."],
+  mr:["न झालेला वर्कआउटच वाईट असतो.","स्वतःला ढकला कारण कोणी करणार नाही.","यश शिस्तीपासून सुरू होते.","थकल्यावर थांबू नका.","प्रगतीसाठी प्रयत्न करा."],
+  bn:["যে ওয়ার্কআউট হয়নি সেটাই খারাপ।","নিজেকে ঠেলুন কারণ অন্য কেউ করবে না।","সাফল্য শৃঙ্খলা থেকে শুরু হয়।","ক্লান্ত হলে থামবেন না।","অগ্রগতির জন্য চেষ্টা করুন।"],
+  gu:["ન થયેલ વ્યાયામ જ ખરાબ છે।","ખુદને ધક્કો આપો.","સફળતા શિસ્તથી શરૂ થાય છે।","થાક હોય ત્યારે ન અટકો.","પ્રગતિ માટે પ્રયત્ન કરો."],
+  pa:["ਉਹ ਵਰਕਆਊਟ ਜੋ ਹੋਈ ਹੀ ਨਹੀਂ ਸਭ ਤੋਂ ਮਾੜੀ ਹੈ।","ਆਪਣੇ ਆਪ ਨੂੰ ਧੱਕਾ ਦਿਓ।","ਸਫਲਤਾ ਅਨੁਸ਼ਾਸਨ ਨਾਲ ਸ਼ੁਰੂ ਹੁੰਦੀ ਹੈ।","ਥੱਕੇ ਹੋਣ ਤੇ ਨਾ ਰੁਕੋ।","ਤਰੱਕੀ ਲਈ ਕੋਸ਼ਿਸ਼ ਕਰੋ।"],
+};
+['or','as','ur','ks','sd','sa','ne','si','mni','kok','mai','doi','sat'].forEach(l=>QUOTES[l]=QUOTES.en);
 
 const EXERCISES = [
-  {name:"Bench Press",muscle:"Chest",goal:"both",url:"https://www.youtube.com/watch?v=rT7DgCr-3pg",emoji:"🏋️",desc:"Lie flat, lower bar to chest, press up explosively."},
-  {name:"Squat",muscle:"Legs / Quads",goal:"both",url:"https://www.youtube.com/watch?v=ultWZbUMPL8",emoji:"🦵",desc:"Feet shoulder-width, squat to parallel, drive through heels."},
-  {name:"Deadlift",muscle:"Back / Hamstrings",goal:"both",url:"https://www.youtube.com/watch?v=op9kVnSso6Q",emoji:"💪",desc:"Hinge at hips, keep spine neutral, lift and lockout."},
-  {name:"Pull-Up",muscle:"Back / Biceps",goal:"both",url:"https://www.youtube.com/watch?v=eGo4IYlbE5g",emoji:"🤸",desc:"Dead hang, pull chest to bar, lower slowly."},
-  {name:"Shoulder Press",muscle:"Shoulders",goal:"gain",url:"https://www.youtube.com/watch?v=qEwKCR5JCog",emoji:"🏆",desc:"Press dumbbells overhead from shoulder height, control descent."},
-  {name:"Plank",muscle:"Core",goal:"lean",url:"https://www.youtube.com/watch?v=ASdvN_XEl_c",emoji:"🧘",desc:"Hold a straight line from head to heels, breathe steadily."},
-  {name:"Burpees",muscle:"Full Body",goal:"lean",url:"https://www.youtube.com/watch?v=dZgVxmf6jkA",emoji:"🔥",desc:"Drop, push-up, jump up — high-intensity fat burner."},
-  {name:"Lunges",muscle:"Legs / Glutes",goal:"both",url:"https://www.youtube.com/watch?v=D7KaRcUTQeE",emoji:"🚶",desc:"Step forward, knee to 90 degrees, alternate legs."},
+  {name:"Bench Press",muscle:"Chest",goal:"both",url:"https://www.youtube.com/watch?v=rT7DgCr-3pg",emoji:"🏋️",desc:"Lie flat, lower bar to chest, press up."},
+  {name:"Squat",muscle:"Legs",goal:"both",url:"https://www.youtube.com/watch?v=ultWZbUMPL8",emoji:"🦵",desc:"Feet shoulder-width, squat to parallel."},
+  {name:"Deadlift",muscle:"Back",goal:"both",url:"https://www.youtube.com/watch?v=op9kVnSso6Q",emoji:"💪",desc:"Hinge hips, keep spine neutral, lift."},
+  {name:"Pull-Up",muscle:"Back/Biceps",goal:"both",url:"https://www.youtube.com/watch?v=eGo4IYlbE5g",emoji:"🤸",desc:"Dead hang, pull chest to bar."},
+  {name:"Shoulder Press",muscle:"Shoulders",goal:"gain",url:"https://www.youtube.com/watch?v=qEwKCR5JCog",emoji:"🏆",desc:"Press dumbbells overhead."},
+  {name:"Plank",muscle:"Core",goal:"lean",url:"https://www.youtube.com/watch?v=ASdvN_XEl_c",emoji:"🧘",desc:"Hold straight line head to heels."},
+  {name:"Burpees",muscle:"Full Body",goal:"lean",url:"https://www.youtube.com/watch?v=dZgVxmf6jkA",emoji:"🔥",desc:"Drop, push-up, jump up."},
+  {name:"Lunges",muscle:"Legs/Glutes",goal:"both",url:"https://www.youtube.com/watch?v=D7KaRcUTQeE",emoji:"🚶",desc:"Step forward, knee to 90°."},
 ];
 
 const MEALS = {
-  gain:[
-    {time:"Breakfast",foods:"Oats + 4 eggs + banana + whole milk",note:"High carb + protein start"},
-    {time:"Mid-Morning",foods:"Greek yogurt + almonds + whey shake",note:"Protein top-up"},
-    {time:"Lunch",foods:"Rice + grilled chicken breast + avocado",note:"Complex carbs + lean protein"},
-    {time:"Pre-Workout",foods:"Sweet potato + peanut butter toast",note:"Energy for training"},
-    {time:"Post-Workout",foods:"Whey shake + banana + honey",note:"Fast carbs + protein"},
-    {time:"Dinner",foods:"Salmon + quinoa + broccoli + olive oil",note:"Omega-3 + recovery"},
-    {time:"Before Bed",foods:"Cottage cheese + casein shake",note:"Slow-release overnight protein"},
-  ],
-  lean:[
-    {time:"Breakfast",foods:"Egg whites (5) + spinach omelette + black coffee",note:"Low calorie, high protein"},
-    {time:"Mid-Morning",foods:"Apple + 10 almonds",note:"Healthy fats + fibre"},
-    {time:"Lunch",foods:"Grilled chicken + mixed salad + lemon dressing",note:"Volume eating, low cal"},
-    {time:"Pre-Workout",foods:"Banana + green tea",note:"Light energy boost"},
-    {time:"Post-Workout",foods:"Whey shake + water",note:"Protein recovery"},
-    {time:"Dinner",foods:"Turkey mince + steamed veggies + cauliflower rice",note:"Low carb, high protein"},
-    {time:"Before Bed",foods:"Casein shake or cottage cheese",note:"Overnight muscle maintenance"},
-  ],
-  maintain:[
-    {time:"Breakfast",foods:"Oats + 3 eggs + mixed fruit",note:"Balanced macro start"},
-    {time:"Mid-Morning",foods:"Greek yogurt + mixed nuts",note:"Steady energy"},
-    {time:"Lunch",foods:"Chicken + brown rice + vegetables",note:"Balanced macros"},
-    {time:"Pre-Workout",foods:"Banana + light snack",note:"Fuel for training"},
-    {time:"Post-Workout",foods:"Protein shake",note:"Recovery"},
-    {time:"Dinner",foods:"Fish + sweet potato + salad",note:"Omega-3 + complex carbs"},
-    {time:"Before Bed",foods:"Cottage cheese",note:"Overnight protein"},
-  ],
+  gain:[{time:"Breakfast",foods:"Oats + 4 eggs + banana + whole milk",note:"High carb + protein"},{time:"Mid-Morning",foods:"Greek yogurt + almonds + whey shake",note:"Protein top-up"},{time:"Lunch",foods:"Rice + grilled chicken + avocado",note:"Complex carbs + protein"},{time:"Pre-Workout",foods:"Sweet potato + peanut butter toast",note:"Energy"},{time:"Post-Workout",foods:"Whey shake + banana + honey",note:"Fast carbs + protein"},{time:"Dinner",foods:"Salmon + quinoa + broccoli",note:"Omega-3 + recovery"},{time:"Before Bed",foods:"Cottage cheese + casein shake",note:"Overnight protein"}],
+  lean:[{time:"Breakfast",foods:"Egg whites (5) + spinach omelette",note:"Low cal, high protein"},{time:"Mid-Morning",foods:"Apple + 10 almonds",note:"Healthy fats"},{time:"Lunch",foods:"Grilled chicken + salad",note:"Volume eating"},{time:"Pre-Workout",foods:"Banana + green tea",note:"Light energy"},{time:"Post-Workout",foods:"Whey shake + water",note:"Recovery"},{time:"Dinner",foods:"Turkey mince + steamed veggies",note:"Low carb"},{time:"Before Bed",foods:"Casein shake",note:"Overnight protein"}],
+  maintain:[{time:"Breakfast",foods:"Oats + 3 eggs + fruit",note:"Balanced"},{time:"Mid-Morning",foods:"Greek yogurt + nuts",note:"Steady energy"},{time:"Lunch",foods:"Chicken + rice + veggies",note:"Balanced"},{time:"Pre-Workout",foods:"Banana",note:"Energy"},{time:"Post-Workout",foods:"Protein shake",note:"Recovery"},{time:"Dinner",foods:"Fish + sweet potato",note:"Omega-3"},{time:"Before Bed",foods:"Cottage cheese",note:"Protein"}],
 };
 
 // ── INIT ──────────────────────────────────────────────
-document.getElementById('todayDate').textContent = new Date().toLocaleDateString('en-IN',{weekday:'long',year:'numeric',month:'short',day:'numeric'});
-document.getElementById('quoteText').textContent = '"' + QUOTES[Math.floor(Math.random()*QUOTES.length)] + '"';
+function t(key){return(T[state.lang]||T.en)[key]||T.en[key]||key;}
+document.getElementById('todayDate').textContent=new Date().toLocaleDateString('en-IN',{weekday:'long',year:'numeric',month:'short',day:'numeric'});
+setQuote();
 renderExercises();
 renderWorkoutPlan();
 renderMilestones();
+renderReminders();
+
+function setQuote(){
+  const q=QUOTES[state.lang]||QUOTES.en;
+  document.getElementById('quoteText').textContent='"'+q[Math.floor(Math.random()*q.length)]+'"';
+}
+function newQuote(){setQuote();}
+
+// ── LANGUAGE ──────────────────────────────────────────
+function applyLanguage(lang){
+  state.lang=lang;
+  const k=['langLabel','langSub','inspireTitle','inspireSub','formTitle','lName','lAge','lWeight','lHeight','lSex','lFrame','lActivity','lGoal','saveBtn','statsTitle','sBMRLabel','sBMRSub','sTDEELabel','sTDEESub','sTargetLabel','sTargetSub','sGoalLabel','sGoalSub','savedMsg','savedSub','nutTitle','noProfileMsg','nProteinLabel','nCarbsLabel','nFatLabel','woPageTitle','woTitle','woHistTitle','noWoMsg','exPageTitle','exSubtitle','progPageTitle','weightLabel','logBtn','chartTitle','noChartTxt','aiTitle','aiBtn','quoteLabelTxt','newQuoteBtn','milestoneTitle','remindersTitle','motWorkoutsLabel','motStreakLabel','closingTitle','closingSub'];
+  k.forEach(id=>{const el=document.getElementById(id);if(el)el.textContent=t(id);});
+  ['oMale','oFemale','oSmall','oMedium','oLarge','oSed','oLight','oMod','oActive','oVery','oGain','oLean','oMaintain'].forEach(id=>{const el=document.getElementById(id);if(el)el.textContent=t(id);});
+  document.getElementById('goalBadgeDefault')&&(document.getElementById('goalBadge').textContent=t('goalBadgeDefault'));
+  if(!document.getElementById('woBtn').disabled) document.getElementById('woBtn').textContent=t('woBtn');
+  document.getElementById('aiBtn').textContent=t('aiBtn');
+  setQuote();
+  renderReminders();
+  renderMilestones();
+  renderExercises();
+  renderWorkoutPlan();
+  if(state.profile) updateNutrition();
+}
 
 // ── TABS ──────────────────────────────────────────────
 function showTab(name){
   document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
   document.querySelectorAll('.nav-tab,.mobile-tab').forEach(b=>b.classList.remove('active'));
   document.getElementById('sec-'+name).classList.add('active');
-  document.querySelectorAll('.nav-tab,.mobile-tab').forEach(b=>{if(b.textContent.toLowerCase().includes(name.slice(0,4)))b.classList.add('active')});
+  const tabs=['profile','nutrition','workout','exercises','progress','motivation'];
+  const idx=tabs.indexOf(name);
+  document.querySelectorAll('.nav-tab').forEach((b,i)=>{if(i===idx)b.classList.add('active');});
+  document.querySelectorAll('.mobile-tab').forEach((b,i)=>{if(i===idx)b.classList.add('active');});
 }
 
 // ── CALC ──────────────────────────────────────────────
-function calcBMR(w,h,a,sex){
-  if(sex==='male') return Math.round(88.362+13.397*w+4.799*h-5.677*a);
-  return Math.round(447.593+9.247*w+3.098*h-4.330*a);
-}
+function calcBMR(w,h,a,sex){return sex==='male'?Math.round(88.362+13.397*w+4.799*h-5.677*a):Math.round(447.593+9.247*w+3.098*h-4.330*a);}
 function calcTDEE(bmr,act){return Math.round(bmr*parseFloat(act));}
-function calcTarget(tdee,goal){if(goal==='gain')return tdee+300;if(goal==='lean')return tdee-500;return tdee;}
-function getMacros(cal,goal){
-  if(goal==='gain') return {p:Math.round(cal*.3/4),c:Math.round(cal*.45/4),f:Math.round(cal*.25/9)};
-  return {p:Math.round(cal*.4/4),c:Math.round(cal*.3/4),f:Math.round(cal*.3/9)};
-}
+function calcTarget(tdee,goal){return goal==='gain'?tdee+300:goal==='lean'?tdee-500:tdee;}
+function getMacros(cal,goal){return goal==='gain'?{p:Math.round(cal*.3/4),c:Math.round(cal*.45/4),f:Math.round(cal*.25/9)}:{p:Math.round(cal*.4/4),c:Math.round(cal*.3/4),f:Math.round(cal*.3/9)};}
 
 // ── PROFILE ──────────────────────────────────────────
 function saveProfile(){
-  const p = {
-    name: document.getElementById('pName').value.trim(),
-    age: parseFloat(document.getElementById('pAge').value)||25,
-    weight: parseFloat(document.getElementById('pWeight').value)||70,
-    height: parseFloat(document.getElementById('pHeight').value)||175,
-    sex: document.getElementById('pSex').value,
-    frame: document.getElementById('pFrame').value,
-    activity: document.getElementById('pActivity').value,
-    goal: document.getElementById('pGoal').value,
-  };
-  state.profile = p;
-  const bmr = calcBMR(p.weight,p.height,p.age,p.sex);
-  const tdee = calcTDEE(bmr,p.activity);
-  const target = calcTarget(tdee,p.goal);
-  const macros = getMacros(target,p.goal);
-
-  document.getElementById('sBMR').textContent = bmr+' kcal';
-  document.getElementById('sTDEE').textContent = tdee+' kcal';
-  document.getElementById('sTarget').textContent = target+' kcal';
-  document.getElementById('sGoal').textContent = p.goal==='gain'?'Bulk':p.goal==='lean'?'Lean':'Maintain';
+  const p={name:document.getElementById('pName').value.trim(),age:parseFloat(document.getElementById('pAge').value)||25,weight:parseFloat(document.getElementById('pWeight').value)||70,height:parseFloat(document.getElementById('pHeight').value)||175,sex:document.getElementById('pSex').value,frame:document.getElementById('pFrame').value,activity:document.getElementById('pActivity').value,goal:document.getElementById('pGoal').value};
+  state.profile=p;
+  const bmr=calcBMR(p.weight,p.height,p.age,p.sex),tdee=calcTDEE(bmr,p.activity),target=calcTarget(tdee,p.goal);
+  document.getElementById('sBMR').textContent=bmr+' kcal';
+  document.getElementById('sTDEE').textContent=tdee+' kcal';
+  document.getElementById('sTarget').textContent=target+' kcal';
+  const gl=p.goal==='gain'?t('goalBulk'):p.goal==='lean'?t('goalLean'):t('goalMaintain');
+  document.getElementById('sGoal').textContent=gl;
   document.getElementById('statsRow').style.display='block';
-  document.getElementById('profileBadge').style.display='block';
-  document.getElementById('goalBadge').textContent = p.goal==='gain'?'Muscle Gain':p.goal==='lean'?'Lean / Cut':'Maintain';
+  document.getElementById('heroName').textContent=t('welcome').replace('Champion',(p.name||'Champion'));
+  document.getElementById('goalBadge').textContent='Goal: '+gl;
+  updateNutrition();
+  renderWorkoutPlan();
+  renderExercises();
+  renderMilestones();
+  checkMissed();
+}
 
-  // nutrition
+function updateNutrition(){
+  const p=state.profile;if(!p)return;
+  const bmr=calcBMR(p.weight,p.height,p.age,p.sex),tdee=calcTDEE(bmr,p.activity),target=calcTarget(tdee,p.goal),macros=getMacros(target,p.goal);
   document.getElementById('noProfile1').style.display='none';
   document.getElementById('nutritionContent').style.display='block';
   document.getElementById('nProtein').textContent=macros.p+'g';
   document.getElementById('nCarbs').textContent=macros.c+'g';
   document.getElementById('nFat').textContent=macros.f+'g';
-  document.getElementById('mealPlanTitle').innerHTML=(p.goal==='gain'?'Muscle Gain':p.goal==='lean'?'Lean / Cut':'Maintain')+' meal plan <span class="badge badge-blue">'+target+' kcal</span>';
-  const ml = document.getElementById('mealList');
-  ml.innerHTML = '';
-  MEALS[p.goal].forEach(m=>{
-    ml.innerHTML += `<div class="meal-row"><div class="meal-time">${m.time}</div><div><div class="meal-food">${m.foods}</div><div class="meal-note">${m.note}</div></div></div>`;
-  });
-
-  renderWorkoutPlan();
-  renderExercises();
-  renderMilestones();
-
-  if(p.name){
-    document.getElementById('missedAlert').textContent = `Hey ${p.name}! You missed your last workout. Today is a great day to get back on track — you've got this!`;
-  }
-  checkMissed();
+  document.getElementById('mealPlanTitle').innerHTML=(p.goal==='gain'?t('goalBulk'):p.goal==='lean'?t('goalLean'):t('goalMaintain'))+' <span class="badge badge-blue">'+target+' kcal</span>';
+  const ml=document.getElementById('mealList');
+  ml.innerHTML=MEALS[p.goal].map(m=>`<div class="meal-row"><div class="meal-time">${m.time}</div><div><div class="meal-food">${m.foods}</div><div class="meal-note">${m.note}</div></div></div>`).join('');
 }
 
 // ── WORKOUT ──────────────────────────────────────────
 function renderWorkoutPlan(){
-  const goal = state.profile ? state.profile.goal : 'gain';
-  const plans = {
-    gain:["Warm-up: 5 min light cardio","Bench Press – 4 sets x 8 reps","Deadlift – 4 sets x 6 reps","Squat – 4 sets x 8 reps","Shoulder Press – 3 sets x 10 reps","Pull-Ups – 3 sets x 8 reps","Cool-down: foam roll + stretch"],
-    lean:["Warm-up: 10 min jog or jump rope","Burpees – 4 sets x 15 reps","Squat – 4 sets x 12 reps","Lunges – 3 sets x 12 each leg","Plank – 4 sets x 45 sec","Pull-ups – 3 sets x 8 reps","Cool-down: 10 min stretching"],
-    maintain:["Warm-up: 8 min cardio","Squat – 3 sets x 10 reps","Bench Press – 3 sets x 10 reps","Deadlift – 3 sets x 8 reps","Pull-Ups – 3 sets x 8 reps","Plank – 3 sets x 40 sec","Cool-down: stretch"],
-  };
-  const focus = {gain:"Focus: Compound lifts + progressive overload for muscle mass",lean:"Focus: Cardio + compound movements for fat burn",maintain:"Focus: Balanced strength and conditioning"};
-  document.getElementById('woFocus').textContent = focus[goal]||focus.gain;
-  const list = plans[goal]||plans.gain;
-  document.getElementById('woList').innerHTML = list.map(e=>`<div class="wo-row"><div class="wo-dot"></div>${e}</div>`).join('');
+  const goal=state.profile?state.profile.goal:'gain';
+  const plans={gain:["Warm-up: 5 min light cardio","Bench Press – 4 x 8","Deadlift – 4 x 6","Squat – 4 x 8","Shoulder Press – 3 x 10","Pull-Ups – 3 x 8","Cool-down: stretch"],lean:["Warm-up: 10 min jog","Burpees – 4 x 15","Squat – 4 x 12","Lunges – 3 x 12","Plank – 4 x 45 sec","Pull-ups – 3 x 8","Cool-down: stretch"],maintain:["Warm-up: 8 min cardio","Squat – 3 x 10","Bench Press – 3 x 10","Deadlift – 3 x 8","Pull-Ups – 3 x 8","Plank – 3 x 40 sec","Cool-down"]};
+  const f=T[state.lang]&&T[state.lang].wofocus?T[state.lang].wofocus:T.en.wofocus;
+  document.getElementById('woFocus').textContent=f[goal]||f.gain;
+  document.getElementById('woList').innerHTML=plans[goal].map(e=>`<div class="wo-row"><div class="wo-dot"></div>${e}</div>`).join('');
 }
 
 function logWorkout(){
-  const btn = document.getElementById('woBtn');
   state.workouts.push({date:new Date().toISOString(),label:"Workout completed"});
-  state.todayDone = true;
-  btn.textContent = 'Workout logged!';
-  btn.className = 'btn btn-success';
-  btn.disabled = true;
-  renderHistory();
-  renderMilestones();
-  checkMissed();
+  state.todayDone=true;
+  const btn=document.getElementById('woBtn');
+  btn.textContent=t('woDoneBtn');btn.style.background='#dcfce7';btn.style.color='#16a34a';btn.style.border='1px solid #bbf7d0';btn.disabled=true;
+  renderHistory();renderMilestones();checkMissed();
+  document.getElementById('motWorkouts').textContent=state.workouts.length;
+  document.getElementById('motStreak').textContent=state.workouts.length;
 }
 
 function renderHistory(){
-  const el = document.getElementById('woHistory');
-  if(!state.workouts.length){el.innerHTML='<p style="color:#9ca3af;font-size:14px">No workouts logged yet.</p>';return;}
-  el.innerHTML = state.workouts.slice().reverse().slice(0,8).map(w=>`<div class="hist-row"><span>${w.label}</span><span style="color:#9ca3af">${new Date(w.date).toLocaleDateString('en-IN')}</span></div>`).join('');
-  document.getElementById('woStreak').textContent = `Total: ${state.workouts.length} workout${state.workouts.length!==1?'s':''} completed`;
+  const el=document.getElementById('woHistory');
+  if(!state.workouts.length){el.innerHTML=`<p style="color:#9ca3af;font-size:14px">${t('noWoMsg')}</p>`;return;}
+  el.innerHTML=state.workouts.slice().reverse().slice(0,8).map(w=>`<div class="hist-row"><span>Workout</span><span style="color:#9ca3af">${new Date(w.date).toLocaleDateString('en-IN')}</span></div>`).join('');
+  document.getElementById('woStreak').textContent=t('totalWorkouts').replace('{n}',state.workouts.length).replace('{s}',state.workouts.length!==1?'s':'');
 }
 
 function checkMissed(){
-  const last = state.workouts[state.workouts.length-1];
-  const el = document.getElementById('missedAlert');
-  if(state.workouts.length > 0 && (Date.now()-new Date(last.date).getTime())/(1000*60*60*24) > 1.5){
+  const last=state.workouts[state.workouts.length-1];
+  const el=document.getElementById('missedAlert');
+  if(state.workouts.length>0&&(Date.now()-new Date(last.date).getTime())/(1000*60*60*24)>1.5){
+    el.textContent=t('missedAlert').replace('{name}',state.profile?state.profile.name||'there':'there');
     el.style.display='block';
-  } else {
-    el.style.display='none';
-  }
+  } else el.style.display='none';
 }
 
 // ── EXERCISES ────────────────────────────────────────
 function renderExercises(){
-  const goal = state.profile ? state.profile.goal : 'gain';
-  const grid = document.getElementById('exGrid');
-  grid.innerHTML = EXERCISES.filter(e=>e.goal==='both'||e.goal===goal).map(e=>`
-    <div class="ex-card">
-      <div class="ex-icon">${e.emoji}</div>
-      <div class="ex-name">${e.name} <span class="badge badge-blue" style="font-size:10px">${e.muscle}</span></div>
-      <div class="ex-desc">${e.desc}</div>
-      <a class="ex-link" href="${e.url}" target="_blank">Watch demo video →</a>
-    </div>`).join('');
+  const goal=state.profile?state.profile.goal:'gain';
+  document.getElementById('exGrid').innerHTML=EXERCISES.filter(e=>e.goal==='both'||e.goal===goal).map(e=>`<div class="ex-card"><div style="font-size:28px;margin-bottom:8px">${e.emoji}</div><div style="font-weight:600;font-size:14px;margin-bottom:4px">${e.name} <span class="badge badge-blue" style="font-size:10px">${e.muscle}</span></div><div style="font-size:12px;color:#6b7280;margin:6px 0 10px">${e.desc}</div><a class="ex-link" href="${e.url}" target="_blank">${t('exSubtitle').split('.')[0]} →</a></div>`).join('');
 }
 
 // ── PROGRESS ─────────────────────────────────────────
-let weightChart = null;
+let weightChart=null;
 function logWeight(){
-  const val = parseFloat(document.getElementById('weightInput').value);
-  if(!val) return;
+  const val=parseFloat(document.getElementById('weightInput').value);
+  if(!val)return;
   state.weights.push({date:new Date().toLocaleDateString('en-IN'),weight:val});
   document.getElementById('weightInput').value='';
-  renderChart();
+  renderChart();renderMilestones();
 }
-
 function renderChart(){
-  if(state.weights.length<2){
-    document.getElementById('chartCard').style.display='none';
-    document.getElementById('noChartMsg').style.display='block';
-    return;
-  }
-  document.getElementById('chartCard').style.display='block';
-  document.getElementById('noChartMsg').style.display='none';
-  const ctx = document.getElementById('weightChart').getContext('2d');
-  if(weightChart) weightChart.destroy();
-  weightChart = new Chart(ctx,{
-    type:'line',
-    data:{
-      labels:state.weights.map(w=>w.date),
-      datasets:[{label:'Weight (kg)',data:state.weights.map(w=>w.weight),borderColor:'#2563eb',backgroundColor:'rgba(37,99,235,0.08)',borderWidth:2.5,pointRadius:5,pointBackgroundColor:'#2563eb',tension:.35,fill:true}]
-    },
-    options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{y:{ticks:{font:{size:11}},grid:{color:'rgba(0,0,0,0.05)'}},x:{ticks:{font:{size:11}},grid:{display:false}}}}
-  });
+  if(state.weights.length<2){document.getElementById('chartCard').style.display='none';document.getElementById('noChartMsg2').style.display='block';return;}
+  document.getElementById('chartCard').style.display='block';document.getElementById('noChartMsg2').style.display='none';
+  const ctx=document.getElementById('weightChart').getContext('2d');
+  if(weightChart)weightChart.destroy();
+  weightChart=new Chart(ctx,{type:'line',data:{labels:state.weights.map(w=>w.date),datasets:[{label:'Weight (kg)',data:state.weights.map(w=>w.weight),borderColor:'#2563eb',backgroundColor:'rgba(37,99,235,0.08)',borderWidth:2.5,pointRadius:5,pointBackgroundColor:'#2563eb',tension:.35,fill:true}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{y:{ticks:{font:{size:11}},grid:{color:'rgba(0,0,0,0.05)'}},x:{ticks:{font:{size:11}},grid:{display:false}}}}});
 }
 
 // ── AI TIP ────────────────────────────────────────────
 async function getAiTip(){
-  const btn = document.getElementById('aiBtn');
-  const res = document.getElementById('aiResult');
-  if(!state.profile){res.style.display='block';res.textContent='Please save your profile first.';return;}
-  btn.textContent = 'Analyzing...';
-  btn.disabled = true;
-  const p = state.profile;
-  const tdee = calcTDEE(calcBMR(p.weight,p.height,p.age,p.sex),p.activity);
-  const target = calcTarget(tdee,p.goal);
+  const btn=document.getElementById('aiBtn'),res=document.getElementById('aiResult');
+  if(!state.profile){res.style.display='block';res.textContent=t('noProfileMsg');return;}
+  btn.textContent=t('aiLoading');btn.disabled=true;
+  const p=state.profile,tdee=calcTDEE(calcBMR(p.weight,p.height,p.age,p.sex),p.activity),target=calcTarget(tdee,p.goal);
+  const langName={'en':'English','hi':'Hindi','ta':'Tamil','te':'Telugu','kn':'Kannada','ml':'Malayalam','mr':'Marathi','bn':'Bengali','gu':'Gujarati','pa':'Punjabi'}[state.lang]||'English';
   try{
-    const r = await fetch('https://api.anthropic.com/v1/messages',{
-      method:'POST',
-      headers:{'Content-Type':'application/json'},
-      body:JSON.stringify({
-        model:'claude-sonnet-4-20250514',
-        max_tokens:1000,
-        messages:[{role:'user',content:`You are a professional fitness coach. Give a personalized 3-step fitness tip for: Name: ${p.name||'User'}, Age: ${p.age}, Weight: ${p.weight}kg, Height: ${p.height}cm, Goal: ${p.goal==='gain'?'muscle gain':'lean/cut'}, Activity level: ${p.activity}. Target calories: ${target} kcal/day. Keep it practical, motivating, and concise. Format as 3 numbered steps.`}]
-      })
-    });
-    const data = await r.json();
-    res.textContent = data.content?.[0]?.text || 'Stay consistent, eat your protein, and trust the process!';
-  } catch(e){
-    res.textContent = 'Stay consistent, eat your protein, and trust the process!';
-  }
-  res.style.display='block';
-  btn.textContent = 'Refresh tip';
-  btn.disabled = false;
+    const r=await fetch('https://api.anthropic.com/v1/messages',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:1000,messages:[{role:'user',content:`You are a professional fitness coach. Give a personalized 3-step fitness tip for: Name: ${p.name||'User'}, Age: ${p.age}, Weight: ${p.weight}kg, Height: ${p.height}cm, Goal: ${p.goal}, Target calories: ${target} kcal/day. Respond in ${langName} language. Format as 3 numbered steps.`}]})});
+    const data=await r.json();
+    res.textContent=data.content?.[0]?.text||'Stay consistent and trust the process!';
+  }catch(e){res.textContent='Stay consistent, eat your protein, and trust the process!';}
+  res.style.display='block';btn.textContent=t('aiBtn');btn.disabled=false;
 }
 
 // ── MILESTONES ────────────────────────────────────────
 function renderMilestones(){
-  const ms = [
-    {label:'Profile saved',done:!!state.profile},
-    {label:'First workout logged',done:state.workouts.length>=1},
-    {label:'5 workouts completed',done:state.workouts.length>=5},
-    {label:'10 workouts completed',done:state.workouts.length>=10},
-    {label:'First weight entry logged',done:state.weights.length>=1},
-    {label:'7-day workout streak',done:state.workouts.length>=7},
-  ];
-  document.getElementById('milestonesList').innerHTML = ms.map(m=>`
-    <div class="milestone">
-      <div class="ms-check ${m.done?'ms-done':'ms-todo'}">${m.done?'✓':'○'}</div>
-      <div class="ms-label">${m.label}</div>
-      ${m.done?'<span class="badge badge-green">Achieved</span>':''}
-    </div>`).join('');
+  const ms=t('milestones');
+  const done=[!!state.profile,state.workouts.length>=1,state.workouts.length>=5,state.workouts.length>=10,state.weights.length>=1,state.workouts.length>=7];
+  document.getElementById('milestonesList').innerHTML=ms.map((m,i)=>`<div class="milestone"><div style="width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;flex-shrink:0;background:${done[i]?'#dcfce7':'#f1f5f9'};color:${done[i]?'#16a34a':'#9ca3af'}">${done[i]?'✓':'○'}</div><div style="font-size:13px;color:${done[i]?'#374151':'#9ca3af'};flex:1">${m}</div>${done[i]?`<span class="badge badge-green">${t('achieved')}</span>`:''}</div>`).join('');
+  document.getElementById('motWorkouts').textContent=state.workouts.length;
+  document.getElementById('motStreak').textContent=state.workouts.length;
+}
+
+function renderReminders(){
+  document.getElementById('remindersList').innerHTML=t('reminders').map(r=>`<div style="display:flex;align-items:center;gap:12px;background:rgba(255,255,255,0.08);border-radius:10px;padding:12px 14px"><span style="font-size:20px">${r.split(' ')[0]}</span><span style="font-size:13px;color:rgba(255,255,255,0.9)">${r.split(' ').slice(1).join(' ')}</span></div>`).join('');
 }
 </script>
 </body>
